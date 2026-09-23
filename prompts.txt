@@ -1,5 +1,5 @@
 1. Analista: Actúa como analista. Analiza el siguiente ejercicio (adjuntado como contexto en la imagen "nombreImagen.png").    
 2. Actúa como planificador. Con base en el análisis, diseña el esqueleto de la clase, las firmas de los métodos y el plan de complejidad asintótica en pipeline/02_plan_tecnico.md
-3. En base al plan técnico (pipeline/02_plan_tecnico.md) codifica el diseño.
-4. Tester: Toma el código de nombrearchivo.java y plasma la matriz de casos de prueba en pipeline/03_pruebas.md
-5. Explicador: Vuelca el análisis conceptual y asintótico de nombrearchivo.java en pipeline/04_explicacion.md   
+3. Actúa como desarrollador: En base al plan técnico (pipeline/02_plan_tecnico.md) codifica el diseño.
+4. Actúa como Tester: Toma el código de nombrearchivo.java y plasma la matriz de casos de prueba en pipeline/03_pruebas.md
+5. Actúa como Explicador: Vuelca el análisis conceptual y asintótico de nombrearchivo.java en pipeline/04_explicacion.md   
