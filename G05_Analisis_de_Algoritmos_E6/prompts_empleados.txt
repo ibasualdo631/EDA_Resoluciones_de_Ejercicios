@@ -1,0 +1,25 @@
+Analista: Analiza el enunciado del Ejercicio 6. Comparar si dos vectores son iguales,
+al detectar cualquier diferencia entre uno y el otro finalizar el algoritmo.
+Tener en cuenta los casos bordes, si un vector está vacío, vector null.
+Además, se solicita el analisis algoritmico, peor caso, caso promedio y mejor caso.
+Redactá un prompt inicial claro para implementar una solución.
+
+Planificador: En base al analisis generado, realiza un plan técnico para el desarrollador. 
+Definí el diseño, manejo de excepciones, complejidad asintótica y las instrucciones que veas necesarias para el desarrollador.
+Dejá tu plan técnico generado en pipeline/02_plan_tecnico.md
+
+Desarrollador: Implementa en lenguaje Java la clase CompararVectores. Cuyos requisitos son:
+1. Incluir el bloque de comentarios al inicio con el prompt empleado.
+2. Método compararVectores()
+3. Si uno de los vectores es null, lanzar IllegalArgumentException.
+4. Comentar en el código por qué no es necesario (aunque si puede serlo) comparar los dos vectores por completo
+5. Metodo main con pruebas:
+    a) Vector nulo
+    b) Vectores iguales
+    c) Vectores distintos
+    d) Vectores iguales de distinto tamaño, por ejemplo [1,2,3] y [1,2,3,4,5]
+
+Tester: Revisa el código java generado por el desarrollador y armá una tabla simple con
+las pruebas que fueron realizadas, validando que todo salga de manera correcta.
+
+Explicador: Explica de forma simple el código y genera un par de preguntas para ver si se comprendieron los conceptos de manera correcta.
