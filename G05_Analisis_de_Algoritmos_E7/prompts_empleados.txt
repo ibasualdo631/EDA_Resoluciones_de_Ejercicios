@@ -1,0 +1,30 @@
+Analista: Analiza el enunciado. Necesito que tomes un vector y lo inviertas de la forma más eficiente posible. Requisitos de analisis:
+1. Evaluar casos borde (Vector de un único elemento, Vector nulo)
+2. Complejidad asíntotica: Realiza un analisis de los casos: mejor, peor y promedio.
+3. Tener en cuenta la complejidad espacial.
+4. Toma en cuenta las dos formas de invertir un vector, mediante un arreglo auxiliar, o in situ.
+
+Planificador: En base al analisis generado, crear un plan tecnico para la posterior implementación por parte del agente desarrollador. Recorda:
+1. Definir las clases invertirVectorInSitu e InvertirVectorAuxiliar, ambas siendo del mismo tipo, recibiendo como parametro la referencia a un vector y retornando el vector resultante invertido, o, en caso borde, retornar el aviso de que el vector es nulo o posee un solo elemento.
+2. Manejo de excepciones (como vector null con IllegalArgumentException)
+3. Desglose de complejidad, mejor, promedio y peor caso (para cada uno de los métodos)
+4. Guarda el plan tecnico en pipeline/02_plan_tecnico.md
+
+Desarrollador: Desarrolla en plan_tecnico generado por el agente Planificador.
+Criterios de desarrollo:
+1. Incluir bloque de comentarios al principio con el prompt empleado.
+2. Ambos métodos requeridos dentro del plan tecnico.
+3. Si el vector es nulo lanzar IllegalArgumentException
+4. Validar si la longitud del vector es <2, puesto que si el vector está vacío o tiene un único elemento no puede invertirse, queda exactamente igual. En este caso, avisar al usuario imprimiendo por pantalla que el vector está vacío/tiene un solo elemento.
+5. Documentación del código Javadoc
+6. Método main con pruebas en consola:
+    a) Vector vacío
+    b) Vector de un solo elemento
+    c) Vector null
+    d) Vector de 5 elementos
+    e) Vector capicua (1,2,3,2,1)
+
+
+Tester: Pon a prueba el código generado por el agente desarrollador, y armá una tabla simple con las pruebas realizadas.
+
+Explicador: Explica de forma simple el código y generá un par de preguntas para validar la comprensión.
