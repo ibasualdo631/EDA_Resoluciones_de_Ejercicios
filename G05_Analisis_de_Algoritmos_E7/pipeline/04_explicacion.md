@@ -51,4 +51,8 @@ Si es necesario conservar el vector original, conviene la versión auxiliar, ace
 ## Preguntas para comprobar la comprensión
 
 1. Para el vector `[2, 5, 8, 9]`, ¿qué parejas de posiciones intercambia el método in situ y cuál es el resultado final?
+Intercambia extremos, es decir 2 y 9 y luego 5 y 8, dejando como resultado el vector [9,8,5,2].
 2. ¿Qué diferencia hay entre las dos versiones respecto a la referencia y al contenido del vector original, y cómo se refleja esa diferencia en su complejidad espacial?
+Con respecto a la referencia, por un lado InvertirVectorInSitu emplea dos referencias, una que apunta al elemento inicial y otra que al final del vector, invierte estos dos y pasa al segundo elemento del vector y la referencia del final pasa al penultimo elemento e invirte, iterando este proceso hasta llegar a la pareja del medio. 
+Por otro lado, InvertirVectorAuxiliar se para al final del vector y va copiando los valores de derecha a izquierda en otro arreglo sin modificar el original para invertir el vector.
+Ambas complejidades son lineales, pero para la que emplea el vector auxiliar la complejidad espacial es lineal O(n), en lugar de constante como si lo es In Situ O(1). 
