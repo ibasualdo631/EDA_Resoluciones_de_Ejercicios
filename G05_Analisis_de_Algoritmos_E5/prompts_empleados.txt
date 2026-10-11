@@ -1,0 +1,27 @@
+Analista: Analizá el Ejercicio 5: Contar cuántas veces aparece un valor objetivo dentro
+ de un vector de enteros en Java. Justificá por qué no se puede hacer un corte anticipado
+(break/return) y es obligatorio recorrer todo el arreglo. Indicá los casos borde (vector vacío, 
+vector null, elemento no encontrado) y redactá un prompt inicial claro para implementar la solución.
+
+
+Planificador: En base a este análisis, definí el diseño técnico del método: 
+firma estática (ej: `public static int contarOcurrencias(int[] vector, int objetivo)`),
+ manejo de excepciones si el vector es null, y la complejidad asintótica
+ (Peor caso $O(n)$, Mejor caso $\Omega(n)$ y Espacio $O(1)$).
+ Generá las instrucciones directas para el Desarrollador."
+
+Desarrollador: Implementá en Java la clase ContadorOcurrencias.
+Requisitos:   Incluir el bloque de comentarios al inicio con el prompt utilizado.   
+Método public static int contarOcurrencias(int[] vector, int objetivo).   
+Si el vector es null, lanzar IllegalArgumentException.
+Si está vacío, retornar 0.Recorrer todo el vector con un ciclo e incrementar un contador cada vez que coincida.   
+Comentar en el código por qué es obligatorio el recorrido completo y no hay corte anticipado.
+Método main con 3 pruebas: número que aparece varias veces, número que no existe, y vector vacío."
+
+Tester: "Revisá este código Java de conteo de ocurrencias. Armá una tabla simple con los casos de prueba
+(valor ausente, valor repetido, todos iguales, vector vacío) y confirmá que el código no falle en ninguno."
+
+Explicador: *Explicame de forma simple:*
+1. ¿Por qué la complejidad temporal es siempre $O(n)$ y no existe un mejor caso $O(1)$?
+2. ¿Cuál es la complejidad espacial y por qué es $O(1)$?
+3. Haceme 2 preguntas cortas para ver si entendí el concepto."
