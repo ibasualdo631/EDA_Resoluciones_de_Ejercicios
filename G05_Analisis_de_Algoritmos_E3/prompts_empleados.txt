@@ -1,0 +1,61 @@
+Analista: Actúa como Analista de Algoritmos. Analiza el Ejercicio 3: "Buscar un elemento en un vector ordenado mediante búsqueda binaria".
+
+Tareas obligatorias:
+1. Explica la estrategia de división y conquista de la búsqueda binaria y justifica formalmente por qué supera al recorrido lineal O(n) reduciendo el espacio de búsqueda a la mitad en cada paso (O(log n)), bajo la precondición estricta de que el vector esté ordenado.
+2. Identifica los casos límite y de borde:
+   - Elemento en el extremo inicial (índice 0) o extremo final (índice n - 1).
+   - Elemento ausente (menor que el mínimo, mayor que el máximo, o en un rango intermedio).
+   - Elemento justo en el punto medio exacto en la primera iteración.
+   - Vector con un único elemento (coincidente y no coincidente).
+   - Vector vacío (length == 0) o referencia nula (null).
+3. Define los requerimientos de telemetría por consola para mostrar la traza en vivo de las variables de control (inicio, fin, medio, valor evaluado).
+4. Redacta el borrador del Prompt Técnico Inicial para el Planificador y el bloque de cabecera de la entrega.
+
+Planificador: Actúa como Planificador / Software Architect. A partir del análisis del Ejercicio 3 (Búsqueda Binaria):
+
+1. Diseña la estructura técnica de la clase (BusquedaBinaria) y el contrato del método:
+   - Firma estática: public static int buscar(int[] vector, int objetivo)
+   - Retorno canónico del índice encontrado (0 a n - 1) o -1 si el elemento no existe.
+2. Manejo fail-fast de excepciones:
+   - Validar vector null o vacío con IllegalArgumentException o retorno controlado según el diseño.
+3. Prevención de bugs de bajo nivel:
+   - Exigir el cálculo seguro del índice medio para evitar overflow de enteros: mid = low + (high - low) / 2 (en lugar de (low + high) / 2).
+4. Matriz formal de complejidad asintótica:
+   - Complejidad Temporal: Peor Caso O(log n), Mejor Caso Ω(1) (si está en el medio exacto al inicio), Caso Promedio Θ(log n).
+   - Complejidad Espacial: O(1) estricto (enfoque iterativo sin marcos apilados en el Call Stack).
+5. Genera el Hyper-Prompt definitivo para el Agente Desarrollador, detallando el formato tabular/log por consola para trazar paso a paso cómo evolucionan inicio, fin y medio en cada ciclo.
+
+Desarrollador: Actúa como Desarrollador Java Senior. Implementa en Java la solución para el Ejercicio 3 (Búsqueda Binaria en vector ordenado) siguiendo el Blueprint técnico:
+
+Requisitos obligatorios:
+1. Incluir el bloque de cabecera obligatorio con el Prompt Inicial utilizado y los ajustes.
+2. Implementar el algoritmo de forma iterativa usando variables low/inicio, high/fin y mid/medio calculada de forma segura contra integer overflow.
+3. Traza paso a paso: Imprimir en consola en cada iteración del bucle una línea con el estado de las variables:
+   [Paso X] inicio: <inicio> | fin: <fin> | medio: <medio> | valor medio: <vector[medio]> | comparativa con <objetivo>
+4. Documentar en comentarios del código la justificación de por qué este enfoque es O(log n) frente a una búsqueda lineal O(n) y qué rol juega el orden previo del arreglo.
+5. Incluir un método main con un banco de pruebas exhaustivo:
+   - Caso con elemento encontrado en el medio.
+   - Caso con elemento en los extremos.
+   - Caso con elemento inexistente.
+   - Caso de vector con un único elemento.
+
+Tester: Actúa como Tester / SDET. Audita y valida la implementación del Ejercicio 3 (Búsqueda Binaria):
+
+1. Genera la Matriz de Casos de Prueba cubriendo:
+   - Elemento presente en la primera división (índice medio directo - mejor caso Ω(1)).
+   - Elemento en el índice 0 (extremo izquierdo).
+   - Elemento en el índice n - 1 (extremo derecho).
+   - Elemento no presente menor que vector[0].
+   - Elemento no presente mayor que vector[n - 1].
+   - Elemento no presente intercalado entre dos valores existentes.
+   - Vector de 1 solo elemento (match y no match).
+   - Arreglo vacío (length == 0) y arreglo null.
+2. Verifica que las trazas de consola muestren coherentemente el estrechamiento del rango de búsqueda [inicio, fin] hasta converger.
+3. Emite el veredicto de calidad formal para la entrega de la cátedra.
+
+Explicador: Actúa como Explicador / Docente Titular. Realiza la radiografía conceptual del Ejercicio 3:
+
+1. Explicación matemática: Demuestra formalmente por qué dividir el espacio a la mitad en cada ciclo produce una complejidad O(log₂ n) (análisis de recurrencia T(n) = T(n/2) + c).
+2. Contraste de ingeniería: Explica la falacia de ordenar un vector con QuickSort/Arrays.sort() (costo O(n log n)) exclusivamente para hacer una única búsqueda binaria (O(log n)), frente a realizar una búsqueda lineal directa O(n). ¿Cuándo se amortiza el costo de ordenar?
+3. Análisis de memoria: Justifica por qué la implementación iterativa es O(1) en RAM frente a una implementación recursiva que consumiría O(log n) en el Call Stack.
+4. Formula 3 preguntas socráticas de examen oral sobre búsqueda binaria para autoevaluar mi comprensión.
