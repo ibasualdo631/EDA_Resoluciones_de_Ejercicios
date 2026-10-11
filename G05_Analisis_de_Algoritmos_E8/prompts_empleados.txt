@@ -1,0 +1,34 @@
+Analista: Analizá el Ejercicio 8: Sumar todos los elementos de una matriz de enteros en Java.   
+Requisitos de análisis:   
+Explicar el recorrido por filas y columnas mediante dos ciclos anidados.  
+Analizar la complejidad temporal O(N) y espacial O(1).
+Definir cómo contabilizar las operaciones elementales realizadas (lecturas y sumas acumuladas).
+Casos borde: matriz null, matriz sin filas (0 filas) o con filas vacías.Redactá el prompt técnico inicial.
+
+
+
+Planificador: En base al análisis, armá el plan técnico en pipeline/02_plan_tecnico.md:
+Clase SumaMatriz con el método public static ResultadoSuma sumar(int[][] matriz) (retornando un DTO con la suma y el contador de operaciones, o mostrando ambos valores por consola).   
+Validación si la matriz es null o matriz.length == 0, lanzar IllegalArgumentException.
+Cotas asintóticas: Peor Caso O(N), Mejor Caso Omega(N) y Espacio O(1).   
+Generá las instrucciones directas para el Desarrollador.
+
+
+
+Desarrollador: Implementá en Java la clase SumaMatriz siguiendo el plan técnico:   
+Requisitos obligatorios:   
+Bloque de comentarios al inicio con el prompt utilizado y ajustes.   
+Método que recorra la matriz con dos bucles for anidados acumulando la suma y sumando un contador de operaciones elementales en cada celda.   
+Lanzar IllegalArgumentException si la matriz es null o está vacía.
+Método main de prueba con: 
+a) Matriz 3x3 normal (mostrando la suma y operaciones totales).   
+b) Matriz NO cuadrada (ej. 2x4).   
+c) Matriz con números negativos 
+d) Matriz null (atrapando la excepción).
+
+
+
+Tester: Audita este código Java de suma de matrices.
+Armá una tabla simple de pruebas (matriz cuadrada, matriz rectangular, números negativos, matriz null) verificando que el total de operaciones coincida con la cantidad de celdas evaluadas (filas x columnas).
+
+Explicador: Explica de forma simple el código y dejá un par de preguntas para validar la comprension del usuario.
