@@ -1,48 +1,49 @@
-# Matriz de casos de prueba
+# Pruebas y auditoría: mínimo de un vector
 
-## 1. Objetivo
-Validar que el método `encontrarMinimo(int[] numeros)` devuelva correctamente el menor valor del arreglo, sin romper el requisito de complejidad lineal `O(n)`, y que maneje correctamente entradas inválidas.
+## 1. Alcance
 
-## 2. Alcance
-Se evaluarán casos de:
-- arreglo válido con distintos ordenamientos
-- números positivos, negativos y repetidos
-- entradas límite
-- validación de errores para `null` y arreglo vacío
+Se audita `MinimoVector.encontrarMinimo(int[])`. Se verifica el valor devuelto, el comportamiento ante entradas inválidas y que el algoritmo no modifique el arreglo recibido. Las pruebas automatizadas se encuentran en `MinimoVectorTestRunner.java` y no requieren bibliotecas externas.
 
-## 3. Matriz de pruebas
+## 2. Matriz de casos de prueba
 
-| ID | Tipo de prueba | Entrada | Resultado esperado | Observación |
-|---|---|---|---|---|
-| TC-01 | Caso base | `[42]` | `42` | Arreglo con un único elemento. |
-| TC-02 | Caso normal | `[1, 2, 3, 4, 5]` | `1` | Mínimo en el primer elemento. |
-| TC-03 | Caso normal | `[9, 8, 7, 6, 5]` | `5` | Arreglo descendente. |
-| TC-04 | Caso normal | `[5, -2, 8, 0, 3]` | `-2` | Mezcla de positivos, negativos y cero. |
-| TC-05 | Caso normal | `[-3, -9, -1, -7]` | `-9` | Todos los valores son negativos. |
-| TC-06 | Caso normal | `[4, 4, 4, 4]` | `4` | Valores repetidos. |
-| TC-07 | Caso normal | `[10, 20, 30, 2]` | `2` | Mínimo en la última posición. |
-| TC-08 | Caso normal | `[1, 50, 40, 90]` | `1` | Mínimo en la primera posición. |
-| TC-09 | Caso límite | `[]` | `IllegalArgumentException` | El arreglo no debe estar vacío. |
-| TC-10 | Caso límite | `null` | `IllegalArgumentException` | El arreglo no debe ser nulo. |
+| ID | Escenario | Entrada | Resultado esperado |
+|---|---|---|---|
+| TC-01 | Elementos variados, arbitrarios y desordenados | `{12, -3, 25, 0, -11, 8}` | `-11` |
+| TC-02 | Un único elemento | `{42}` | `42`; termina sin acceder a índices posteriores |
+| TC-03 | Valores negativos | `{-5, -20, -1}` | `-20` |
+| TC-04 | Mínimo duplicado | `{4, -8, 2, -8, 10}` | `-8` |
+| TC-05 | Vector ordenado ascendentemente | `{-7, -2, 0, 3, 9}` | `-7` |
+| TC-06 | Vector ordenado descendentemente | `{9, 3, 0, -2, -7}` | `-7` |
+| TC-07 | Mínimo en primera posición | `{-10, 3, 0, 8}` | `-10` |
+| TC-08 | Mínimo en posición intermedia | `{6, 2, -4, 5, 8}` | `-4` |
+| TC-09 | Mínimo en última posición | `{5, 2, 9, -4}` | `-4` |
+| TC-10 | Límite inferior de `int` | `{0, Integer.MIN_VALUE, 7}` | `Integer.MIN_VALUE` |
+| TC-11 | Arreglo vacío | `new int[0]` | Lanza `IllegalArgumentException` |
+| TC-12 | Referencia nula | `null` | Lanza `IllegalArgumentException` |
 
-## 4. Resultado esperado del algoritmo
-El método `encontrarMinimo` debe:
-1. Validar que el arreglo no sea `null`.
-2. Validar que el arreglo no esté vacío.
-3. Recorrer cada elemento del arreglo una sola vez.
-4. Devolver el menor valor encontrado.
+En cada caso válido, el TestRunner también compara el arreglo antes y después para confirmar que el método no lo modifica.
 
-## 5. Criterio de aceptación
-Se considera correcta la implementación si:
-- cumple todos los casos válidos del cuadro anterior,
-- lanza `IllegalArgumentException` para `null` y arreglos vacíos,
-- mantiene una complejidad temporal de `O(n)`.
+## 3. Ejecución automatizada
 
-## 6. Evidencia de validación
-Se ejecutó la clase Java con un caso de prueba válido y el resultado obtenido fue:
+Desde el directorio del ejercicio, compilar y ejecutar:
 
-```java
-El valor mínimo es: 3
+```text
+javac MinimoVector.java MinimoVectorTestRunner.java
+java MinimoVectorTestRunner
 ```
 
-Esto confirma que el algoritmo identifica correctamente el menor elemento del arreglo de prueba.
+El runner utiliza aserciones (`AssertionError`) y reporta `OK` por cada caso aprobado. Si un resultado no coincide, si el arreglo cambia o si falta una excepción esperada, la ejecución falla. El resumen final indica el total de pruebas aprobadas.
+
+## 4. Resultado de auditoría
+
+La implementación satisface el contrato evaluado:
+
+- valida `null` y longitud cero antes de acceder a `vector[0]`;
+- inicializa el candidato con el primer elemento, evitando fallos con entradas totalmente positivas o negativas;
+- recorre el arreglo sin ordenar y devuelve el mínimo, incluidos valores repetidos y `Integer.MIN_VALUE`;
+- mantiene intacta la entrada;
+- tiene costo temporal `Θ(n)` y espacio auxiliar `O(1)`.
+
+**Resultado de ejecución:** `javac` compiló ambos archivos y el TestRunner finalizó con **12 de 12 pruebas aprobadas**.
+
+**Dictamen:** aprobado para la entrega respecto de los requisitos funcionales y los casos cubiertos por esta matriz.

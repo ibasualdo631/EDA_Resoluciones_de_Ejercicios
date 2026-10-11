@@ -1,240 +1,95 @@
-# Explicación conceptual y asintótica de `ValorMinimoVector`
+# Explicación conceptual: encontrar el mínimo de un vector
 
-## 1. ¿Qué hace este programa?
+## 1. La idea del algoritmo
 
-Este programa resuelve un problema clásico de estructuras de datos: encontrar el valor mínimo dentro de un arreglo de enteros. El método principal es `encontrarMinimo(int[] numeros)`, que recibe un arreglo y devuelve el elemento más pequeño.
-
-La idea central es sencilla:
-- asumir que el primer elemento es el mínimo actual,
-- recorrer el arreglo desde la posición 1,
-- comparar cada valor con el mínimo actual,
-- actualizar el mínimo si se encuentra un valor menor.
-
-Al final del recorrido, el valor que quedó guardado es el menor de todos.
-
----
-
-## 2. Estructura del código
+El método `MinimoVector.encontrarMinimo(int[] vector)` devuelve el valor más pequeño del arreglo. Primero verifica que el arreglo no sea `null` ni vacío; después guarda el primer elemento como candidato y compara con él todos los elementos restantes:
 
 ```java
-public class ValorMinimoVector {
-
-    public static int encontrarMinimo(int[] numeros) {
-        validarArreglo(numeros);
-
-        int minimo = numeros[0];
-
-        for (int i = 1; i < numeros.length; i++) {
-            if (numeros[i] < minimo) {
-                minimo = numeros[i];
-            }
-        }
-
-        return minimo;
-    }
-
-    private static void validarArreglo(int[] numeros) {
-        if (numeros == null) {
-            throw new IllegalArgumentException("El arreglo no puede ser nulo.");
-        }
-
-        if (numeros.length == 0) {
-            throw new IllegalArgumentException("El arreglo no puede estar vacío.");
-        }
-    }
-
-    public static void main(String[] args) {
-        int[] datos = {12, 7, 3, 21, 5, 9};
-        int minimo = encontrarMinimo(datos);
-        System.out.println("El valor mínimo es: " + minimo);
+int minimo = vector[0];
+for (int i = 1; i < vector.length; i++) {
+    if (vector[i] < minimo) {
+        minimo = vector[i];
     }
 }
-```
-
----
-
-## 3. Cómo funciona paso a paso
-
-### 3.1. Validación de entrada
-
-```java
-validarArreglo(numeros);
-```
-
-Antes de buscar el mínimo, el programa comprueba que el arreglo:
-- no sea `null`
-- no esté vacío
-
-Esto evita errores como:
-- intentar acceder a `numeros[0]` cuando el arreglo es `null`
-- intentar buscar un mínimo en un conjunto sin elementos
-
-Si hay un problema, se lanza una excepción con `IllegalArgumentException`.
-
-### 3.2. Inicialización del mínimo
-
-```java
-int minimo = numeros[0];
-```
-
-Se toma el primer elemento como referencia inicial. Esto es válido porque al menos hay un elemento, gracias a la validación.
-
-### 3.3. Bucle recorre el arreglo
-
-```java
-for (int i = 1; i < numeros.length; i++) {
-    if (numeros[i] < minimo) {
-        minimo = numeros[i];
-    }
-}
-```
-
-La variable `i` recorre cada posición del arreglo a partir de la segunda.
-
-En cada iteración se compara:
-- `numeros[i]` con el valor guardado en `minimo`
-- si el elemento actual es menor, entonces se actualiza `minimo`
-
-Esto mantiene en `minimo` el menor valor encontrado hasta ese momento.
-
-### 3.4. Retorno del resultado
-
-```java
 return minimo;
 ```
 
-Cuando termina el ciclo, `minimo` contiene el valor más pequeño del arreglo y se devuelve.
+Por ejemplo, para `{8, 3, 6, -2, 5}`:
 
----
+| Índice | Valor leído | `minimo` antes | `minimo` después |
+|---:|---:|---:|---:|
+| Inicial | 8 | — | 8 |
+| 1 | 3 | 8 | 3 |
+| 2 | 6 | 3 | 3 |
+| 3 | -2 | 3 | -2 |
+| 4 | 5 | -2 | -2 |
 
-## 4. Conceptos de Java que aparecen
+Al terminar, devuelve `-2`. La variable de seguimiento siempre contiene el menor valor visto hasta ese momento. Esa es la propiedad que permite razonar sobre la corrección: después de examinar el índice `i`, `minimo` es el menor valor del segmento `vector[0..i]`.
 
-### 4.1. Arreglos
-Un arreglo `int[]` almacena varios valores enteros en posiciones consecutivas.
+## 2. Qué ocurre en memoria: Stack y Heap
 
-Ejemplo:
-```java
-int[] datos = {12, 7, 3, 21, 5, 9};
-```
+Para explicar la ejecución se suele usar el modelo didáctico de Stack (pila) y Heap (montículo). La especificación de Java no exige que una implementación concreta disponga físicamente cada dato exactamente así; la JVM puede optimizar la ejecución, por ejemplo manteniendo variables locales en registros.
 
-Cada elemento está identificado por un índice:
-- `datos[0] = 12`
-- `datos[1] = 7`
-- `datos[2] = 3`
+En el modelo habitual:
 
-### 4.2. Bucle `for`
-El `for` permite repetir instrucciones un número determinado de veces.
+- El arreglo `int[]` es un objeto creado en el Heap. Allí se encuentran sus elementos enteros, accesibles por índices desde `0` hasta `length - 1`.
+- Al llamar `encontrarMinimo(vector)`, se crea un marco de ejecución para el método. El parámetro local `vector` contiene una referencia al arreglo; no se copia todo el arreglo.
+- Las variables locales `minimo` e `i` pertenecen a la ejecución del método (conceptualmente, al Stack). `minimo` guarda un solo entero candidato y `i` el índice actual.
+- En cada iteración, `vector[i]` accede al elemento del Heap indicado por la referencia y el índice. En el modelo RAM, el acceso por índice y la comparación de dos `int` cuestan `O(1)`.
 
-```java
-for (int i = 1; i < numeros.length; i++)
-```
+La variable `minimo` no almacena todos los elementos ni una copia del vector: se actualiza cuando encuentra un valor menor. Por eso el método requiere espacio auxiliar constante, `O(1)`. El arreglo de entrada ocupa `O(n)` memoria, pero esa memoria ya existía y no se cuenta como espacio auxiliar adicional del algoritmo.
 
-Esto significa:
-- `i` comienza en 1
-- se repite mientras `i` sea menor que la longitud del arreglo
-- en cada vuelta, `i` aumenta en 1
+## 3. Por qué el algoritmo debe examinar todos los elementos
 
-### 4.3. Condicional `if`
-El `if` decide si se actualiza el valor mínimo.
+No hay una regla que permita descartar una posición sin leerla: cualquiera de los elementos que faltan podría ser menor que el candidato guardado. Esto sigue siendo cierto incluso si el mínimo actual parece muy pequeño o está en la primera posición.
 
-```java
-if (numeros[i] < minimo) {
-    minimo = numeros[i];
-}
-```
+Una justificación por indistinguibilidad:
 
-Si el valor actual es menor que el mínimo actual, entonces se reemplaza.
+1. Supongamos que un algoritmo no inspecciona una posición `j`.
+2. Consideremos dos arreglos que coinciden en todas las posiciones que sí inspeccionó.
+3. En el segundo arreglo, cambiamos solamente `vector[j]` por un entero menor que el candidato observado.
+4. El algoritmo no puede distinguir los arreglos porque nunca leyó `j`, pero el mínimo verdadero sí cambia.
+5. Por lo tanto, no puede garantizar una respuesta correcta en ambos casos.
 
-### 4.4. Excepciones
-La clase `IllegalArgumentException` se usa para indicar que la entrada es inválida.
+En consecuencia, para cualquier arreglo válido el método debe inspeccionar las `n` posiciones. El bucle hace exactamente `n - 1` comparaciones: la primera posición inicializa el candidato y cada una de las otras posiciones se compara una vez. Si `n = 1`, el bucle no se ejecuta, pero sí se lee el único elemento y se devuelve.
 
-Esto es importante porque el algoritmo asume que el arreglo tiene al menos un elemento.
+### Dictamen de complejidad temporal
 
----
+Sea `n` la cantidad de elementos:
 
-## 5. ¿Por qué esta solución es correcta?
+| Caso | Cota | Demostración |
+|---|---:|---|
+| Mejor caso | `Ω(n)` | Aunque el primer elemento sea el mínimo, se deben inspeccionar todos los restantes para descartar que alguno sea menor. El número de inspecciones es `n`. |
+| Peor caso | `O(n)` | El algoritmo nunca procesa más de `n` elementos y hace `n - 1` comparaciones. |
+| Promedio | `Θ(n)` | La cantidad de trabajo es `n` inspecciones independientemente de dónde esté el mínimo o de cómo se distribuyan los valores. |
 
-La solución es correcta porque:
-1. `minimo` siempre representa el menor valor encontrado hasta el momento.
-2. El algoritmo revisa cada elemento del arreglo exactamente una vez.
-3. Si encuentra un valor menor, lo reemplaza.
-4. Al final, todos los elementos ya fueron comparados y el valor final en `minimo` es el menor de todos.
+Juntas, las cotas inferior y superior muestran que el tiempo es `Θ(n)` (lineal). `Ω(n)` describe la cota inferior asintótica del mejor caso, mientras `O(n)` describe una cota superior del peor caso. La ubicación del mínimo no permite terminar antes: el algoritmo debe seguir hasta el final. No se debe confundir esta tarea con una búsqueda lineal que sí puede detenerse al encontrar un elemento buscado.
 
-Este razonamiento es la base de la demostración de corrección del algoritmo.
+## 4. El ordenamiento previo: trabajo que no aporta
 
----
+Una tentación es ejecutar `Arrays.sort(vector)` y luego leer `vector[0]`. Eso funciona para un arreglo no vacío, pero resuelve una tarea más amplia (ordenar todos los valores) cuando solo se necesita conocer uno. Un ordenamiento por comparaciones eficiente suele requerir `O(n log n)` tiempo; encontrar el mínimo con una pasada requiere `Θ(n)`. Para `n` grande, `n log n` crece más rápido que `n`, así que el ordenamiento añade trabajo sin mejorar el resultado.
 
-## 6. Complejidad asintótica
+Además, `Arrays.sort` ordena el arreglo recibido y, por tanto, cambia su orden. Si se quisiera conservar el original, habría que copiarlo y ordenar la copia, lo que agrega trabajo y memoria para la copia.
 
-### 6.1. Complejidad temporal
+**Precisión importante sobre memoria:** no es correcto afirmar que todo ordenamiento necesariamente usa `O(n)` espacio adicional. El espacio auxiliar depende del algoritmo concreto y de su implementación. Por ejemplo, algoritmos distintos pueden usar arreglos auxiliares, recursión o particionar en el mismo arreglo. La comparación válida aquí es que la solución directa usa `O(1)` espacio auxiliar garantizado y evita el costo de ordenar; no que cualquier `Arrays.sort()` requiera universalmente `O(n)` espacio.
 
-El algoritmo recorre cada elemento del arreglo una sola vez.
+| Enfoque | Tiempo | Espacio auxiliar | ¿Modifica/ordena el vector? |
+|---|---:|---:|---|
+| Recorrido para hallar el mínimo | `Θ(n)` | `O(1)` | No |
+| Ordenar y leer el primer elemento | Normalmente `O(n log n)` para ordenamientos eficientes por comparación | Depende del algoritmo y de la implementación | Sí, salvo que se ordene una copia |
 
-Si el arreglo tiene tamaño `n`, entonces:
-- se compara cada elemento con el mínimo actual,
-- el ciclo se repite `n - 1` veces aproximadamente,
-- la operación es lineal en función de `n`.
+La idea de ingeniería es elegir el algoritmo que calcula exactamente lo requerido con el menor trabajo: leer cada valor una vez, mantener el candidato mínimo y no reordenar datos innecesariamente.
 
-Por lo tanto:
+## 5. Casos relevantes para razonar sobre corrección
 
-$$
-T(n) = O(n)
-$$
+- **Vector de un elemento:** ese elemento es el mínimo; el inicio en el índice `1` evita una lectura fuera de rango.
+- **Valores solo positivos:** inicializar con `vector[0]` evita devolver incorrectamente cero.
+- **Valores negativos o `Integer.MIN_VALUE`:** se comparan directamente; no hace falta sumar ni restar y, por lo tanto, no se introduce desbordamiento aritmético.
+- **Mínimos repetidos:** devolver el valor mínimo no requiere distinguir cuál aparición lo produjo.
+- **Arreglo `null` o vacío:** no existe un mínimo definido, así que el método falla explícitamente con `IllegalArgumentException` antes de acceder al arreglo.
 
-Esto significa que el tiempo crece de manera proporcional al tamaño del arreglo.
+## 6. Preguntas socráticas para el examen oral
 
-### 6.2. Complejidad espacial
-
-Solo se usa una variable adicional llamada `minimo`.
-
-No se crean arreglos extra ni estructuras temporales.
-
-Entonces:
-
-$$
-S(n) = O(1)
-$$
-
-Esto significa que el espacio consumido es constante, independientemente del tamaño del arreglo.
-
----
-
-## 7. Comparación con enfoques menos eficientes
-
-Si se intentara resolver el problema de otra manera, por ejemplo:
-- ordenar el arreglo primero
-- buscar el mínimo con dos recorridos innecesarios
-- usar recursión sin necesidad
-
-entonces el costo aumentaría. En cambio, este algoritmo es óptimo para este caso porque:
-- hace una sola pasada por los datos,
-- usa memoria constante,
-- responde la pregunta directamente.
-
----
-
-## 8. Errores comunes que se evitan
-
-1. Acceder a índices fuera de rango.
-   - Si el arreglo está vacío, no se puede leer `numeros[0]`.
-
-2. No validar la entrada.
-   - Un arreglo `null` provoca error de ejecución.
-
-3. Suposiciones incorrectas.
-   - Si se asume que el primer elemento siempre es el mínimo, se podría cometer un error si el arreglo no se recorre correctamente.
-
-4. Ordenar el arreglo para resolver un problema que no lo requiere.
-   - Ordenar tiene un costo mayor que simplemente encontrar el mínimo.
-
----
-
-## 9. Conclusión
-
-`ValorMinimoVector` es un ejemplo claro de algoritmo lineal: recorre el arreglo una sola vez, mantiene el menor valor encontrado hasta el momento y devuelve el resultado final. Su implementación es simple, eficiente y fácil de entender.
-
-En términos de análisis asintótico:
-- tiempo: $O(n)$
-- espacio: $O(1)$
-
-Esto convierte al algoritmo en una solución ideal para buscar el valor mínimo dentro de un conjunto de enteros.
+1. Si el primer elemento es `Integer.MIN_VALUE`, ¿por qué el algoritmo todavía tiene que recorrer las demás posiciones, aunque ya sea el menor entero representable?
+2. ¿Cómo construirías dos arreglos indistinguibles para un algoritmo que no leyó una posición, pero cuyo mínimo real es distinto? ¿Qué demuestra eso sobre una posible solución sublineal?
+3. Si ordenáramos el arreglo antes de leer el primer elemento, ¿qué trabajo adicional haríamos y qué afirmación sobre el espacio auxiliar sería correcta sin conocer el algoritmo de ordenamiento concreto?

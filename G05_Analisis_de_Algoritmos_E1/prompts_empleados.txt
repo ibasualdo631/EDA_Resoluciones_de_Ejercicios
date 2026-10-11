@@ -1,0 +1,42 @@
+Analista: Actúa como Analista. Analiza el siguiente ejercicio de la guía de Análisis de Algoritmos y Vectores:
+"Implementar un algoritmo en Java que encuentre el valor mínimo de un vector de números enteros".
+
+Necesito que:
+1. Expliques la estrategia más adecuada para resolverlo (recorrido lineal/secuencial con variable de seguimiento).
+2. Justifiques por qué no es necesario ordenar el vector (costo O(n log n) vs O(n) del recorrido lineal).
+3. Identifiques los casos límite (vector vacío, vector de un solo elemento, elementos repetidos, números negativos/mínimos al inicio, medio o fin).
+4. Redactes el borrador del prompt técnico inicial para el planificador y desarrollador que cumpla con los requisitos de entrega de la cátedra.
+
+Planificador: Actúa como Planificador / Software Architect. En base al análisis del Ejercicio 1 (Mínimo de un vector):
+1. Diseña la estructura técnica de la clase (ej. MinimoVector) y la firma del método estático público para operar sobre arreglos primitivos int[] (ej. public static int encontrarMinimo(int[] vector)).
+2. Define el manejo fail-fast de excepciones: lanza IllegalArgumentException o NoSuchElementException si el arreglo es nulo o vacío (length == 0).
+3. Elabora la matriz de complejidad asintótica formal:
+   - Complejidad Temporal en Peor Caso O(n), Mejor Caso Ω(n) y Caso Promedio Θ(n), justificando por qué es necesario recorrer todo el vector sin corte anticipado.
+   - Complejidad Espacial en RAM O(1).
+4. Genera el Hyper-Prompt definitivo para el Agente Desarrollador, solicitando la justificación explícita de por qué ordenar el vector sería una ineficiencia algorítmica.
+
+Desarrollador: Actúa como Desarrollador Java Senior. Implementa en Java la solución para encontrar el mínimo de un vector de enteros siguiendo el plan técnico del Planificador:
+
+Requisitos obligatorios:
+1. Incluir el bloque de comentarios en la cabecera del archivo con el prompt inicial utilizado y los ajustes.
+2. Validar que si el vector es null o está vacío (longitud 0), lance IllegalArgumentException.
+3. Inicializar la variable de control 'minimo' con el primer elemento (vector[0]) y recorrer desde el índice 1 hasta n-1 mediante un bucle iterativo O(n).
+4. Comentar en el código detalladamente por qué NO es necesario ni conveniente ordenar el vector previamente (comparando O(n) frente al costo de O(n log n) de un ordenamiento eficiente).
+5. Incluir un método main con casos de prueba de consola (vector con números positivos, negativos, repetidos, desordenados y caso de un solo elemento).
+
+Tester: Actúa como Tester / QA. Audita el código generado para el Ejercicio 1 (Mínimo de un vector):
+1. Elabora la Matriz de Casos de Prueba cubriendo:
+   - Vector con elementos aleatorios y desordenados.
+   - Vector con un único elemento (debe retornar ese elemento sin desbordar).
+   - Vector con números negativos (ej. -5, -20, -1).
+   - Vector con elementos duplicados que contienen el mínimo repetido.
+   - Vector ya ordenado de forma ascendente y descendente.
+   - Caso borde hostil: arreglo vacío (length == 0) y arreglo null (validando que se dispare la excepción esperada).
+2. Provee el código de un TestRunner o casos de prueba automatizados con aserciones en consola.
+3. Dictamina si el código aprueba para la entrega según los estándares de la materia.
+
+Explicador: Actúa como Explicador / Docente Adjunto. Realiza la disección conceptual del Ejercicio 1:
+1. Explica la mecánica en memoria RAM (Heap y Stack) de la variable de seguimiento frente a los accesos continuos por índice al arreglo primitivo int[].
+2. Dictamen de rendimiento asintótico: Demuestra formalmente por qué tanto el mejor caso Ω(n) como el peor caso O(n) son estrictamente lineales (imposibilidad de corte anticipado sin orden previo).
+3. Contraste algorítmico de examen: Explica en detalle la falacia de ordenar el vector previamente con Arrays.sort() o QuickSort: por qué pagar O(n log n) en tiempo y memoria adicional para resolver un problema que se resuelve en O(n) y O(1) espacial es una pésima decisión de ingeniería.
+4. Formula 3 preguntas socráticas de examen oral sobre este ejercicio para que pueda autoevaluar mi comprensión.
