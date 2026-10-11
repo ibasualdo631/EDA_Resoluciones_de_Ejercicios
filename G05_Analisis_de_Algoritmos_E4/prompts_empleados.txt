@@ -1,0 +1,68 @@
+Analista: Actúa como Analista de Algoritmos. Analiza el Ejercicio 4: "Detectar elementos duplicados en un vector".
+
+Tareas obligatorias:
+1. Desglosa y contrasta las dos estrategias requeridas:
+   - Estrategia A (Fuerza Bruta / Ciclos Anidados): Compara cada elemento i con los elementos j (desde i + 1 hasta n - 1). Identifica su dependencia exclusivamente de comparaciones in-place sin memoria extra.
+   - Estrategia B (Estructura Hash / HashSet): Recorre el arreglo una sola vez insertando en una tabla hash y detecta el duplicado si set.add() retorna false (o si set.contains() es true).
+2. Analiza el Trade-off de Ingeniería fundamental:
+   - Tiempo vs. Espacio (CPU vs. RAM): Estrategia A sacrifica tiempo de procesamiento O(n²) para mantener memoria plana O(1). Estrategia B optimiza el tiempo a O(n) sacrificando memoria adicional O(n) para la tabla de dispersión.
+3. Identifica los casos límite (Edge Cases):
+   - Vector sin duplicados (peor caso temporal para ambos enfoques).
+   - Duplicado en las dos primeras posiciones (mejor caso Ω(1) con corte anticipado).
+   - Duplicado en los extremos (índice 0 e índice n - 1).
+   - Vector con un único elemento o vacío (length <= 1: imposible que haya duplicados).
+   - Manejo de arreglo nulo (null).
+4. Redacta el borrador del Prompt Técnico Inicial para el Planificador y el bloque de cabecera de la entrega.
+
+Planificador: Actúa como Planificador / Software Architect. A partir del análisis del Ejercicio 4 (Detección de duplicados):
+
+1. Diseña la estructura técnica de la clase (ej. DetectorDuplicados) y los contratos de ambos métodos públicos estáticos:
+   - public static boolean tieneDuplicadosFuerzaBruta(int[] vector)
+   - public static boolean tieneDuplicadosHashSet(int[] vector)
+   (Opcional de sobrecarga: métodos que retornen el primer elemento duplicado encontrado).
+2. Define el manejo fail-fast:
+   - Validación de vector == null lanzando IllegalArgumentException.
+   - Retorno inmediato de false si vector.length <= 1 (optimización de frontera).
+3. Asegura el corte anticipado (early return / break) en ambos métodos apenas se detecte la primera colisión de valores.
+4. Elabora la Matriz de Complejidad Asintótica formal:
+   - Fuerza Bruta: Peor Caso O(n²), Mejor Caso Ω(1), Espacio en RAM O(1).
+   - HashSet: Peor Caso O(n) promedio (asumiendo función hash con baja colisión), Mejor Caso Ω(1), Espacio en RAM O(n) auxiliar.
+5. Genera el Hyper-Prompt definitivo para el Agente Desarrollador, exigiendo comentarios técnicos explícitos que justifiquen el trade-off tiempo vs. espacio en el código fuente.
+
+Desarrollador: Actúa como Desarrollador Senior Java. Implementa en Java la solución para el Ejercicio 4 (Detectar elementos duplicados) siguiendo el diseño técnico:
+
+Requisitos obligatorios:
+1. Incluir el bloque de cabecera con el Prompt Inicial utilizado y los ajustes correspondientes.
+2. Implementar 'tieneDuplicadosFuerzaBruta(int[] vector)':
+   - Dos bucles for anidados: el externo de i = 0 a n - 2, el interno de j = i + 1 a n - 1.
+   - Retorno true con corte inmediato al hallar coincidencia; false si concluyen los ciclos.
+3. Implementar 'tieneDuplicadosHashSet(int[] vector)':
+   - Utilizar java.util.HashSet<Integer>.
+   - Un único ciclo for-each aprovechando que set.add(valor) devuelve false si el elemento ya existía en la colección (o chequeando previamente con contains).
+4. Documentar en comentarios del código la comparativa teórica de complejidad temporal y espacial entre ambas soluciones.
+5. Incluir un método main con un banco de pruebas representativo:
+   - Vector con duplicado adyacente al inicio.
+   - Vector con duplicado en los extremos opuestos.
+   - Vector con todos los elementos distintos (peor caso).
+   - Vector de un solo elemento y vector vacío.
+
+
+Tester: Actúa como Tester / QA Algorítmico. Audita y verifica el código del Ejercicio 4:
+
+1. Elabora la Matriz de Casos de Prueba verificando paridad de resultados entre ambas soluciones:
+   - Vector con elementos negativos y positivos duplicados (ej. [-3, 10, 5, -3]).
+   - Vector ordenado sin duplicados.
+   - Vector desordenado con múltiples duplicados (validar que frene en el primero que encuentra).
+   - Vector sin duplicados de tamaño grande (para evidenciar el peor caso).
+   - Vector de longitud 1 y vacío (deben retornar false sin desbordar índices).
+   - Referencia null (debe disparar IllegalArgumentException).
+2. Escribe una batería de pruebas con aserciones en consola que ejecute los mismos vectores en ambos métodos y verifique que devuelvan exactamente el mismo boolean.
+3. Dictamina si la implementación aprueba para la entrega según los estándares de la cátedra.
+
+
+Explicador: Actúa como Explicador. Realiza la radiografía conceptual del Ejercicio 4:
+
+1. Desglose del Trade-Off CPU vs. RAM: Explica conceptualmente por qué la estructura HashSet permite reducir el tiempo de O(n²) a O(n), y cuál es el precio físico que pagamos en memoria RAM (instanciación de objetos Integer por autoboxing y tabla interna en el Heap) frente al costo cero de memoria O(1) de los bucles anidados.
+2. Mecánica interna de HashSet: Explica brevemente cómo opera la inserción O(1) promedio de una tabla hash (función hash + buckets) y por qué un conjunto no admite duplicados.
+3. Simplificación Asintótica de la Fuerza Bruta: Demuestra matemáticamente por qué la sumatoria de comparaciones (n - 1) + (n - 2) + ... + 1 = n(n - 1)/2 simplifica formalmente a O(n²).
+4. Formula 3 preguntas socráticas de examen oral sobre el trade-off tiempo/espacio y estructuras asociativas para validar mi aprendizaje.
