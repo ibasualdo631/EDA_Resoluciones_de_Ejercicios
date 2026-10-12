@@ -1,0 +1,10 @@
+Analista: "Analizá el Ejercicio 2: Comparar Bubble Sort vs Selection Sort ordenando el mismo arreglo. Razoná y explicá la diferencia central entre comparar/intercambiar vecinos continuamente (Burbuja) frente a buscar directamente el menor valor para hacer un solo intercambio por pasada (Selección). Redactá el prompt base."
+
+Planificador: "Diseñá la estructura técnica para BubbleSort. Definí la complejidad temporal asintótica $O(n^2)$ y establecé cómo el algoritmo debe imprimir el estado del arreglo luego de cada ciclo externo. Generá las instrucciones para el desarrollador."
+
+Desarrollador: "Implementá el código en Java. Incluí el comentario de cabecera. En el main, pasale una copia del mismo arreglo desordenado a cada método y mostrá por consola los totales de comparaciones e intercambios efectuados por cada uno."
+
+Tester: "Verificá que ambos algoritmos devuelvan el arreglo correctamente ordenado. Confirmá en la matriz de pruebas que Selection Sort realice estrictamente menos intercambios que Bubble Sort ante el mismo arreglo de entrada."
+
+Explicador: "Analizá los resultados empíricos impresos por consola. Justificá formalmente por qué Selection Sort minimiza las escrituras en memoria respecto a Bubble Sort."
+
