@@ -1,0 +1,10 @@
+Analista: "Analizá el Ejercicio 5: Implementar ShellSort. Explicá conceptualmente por qué la utilización de saltos decrecientes (gaps) soluciona el cuello de botella de Insertion Sort al mover datos lejanos rápidamente. Generá el prompt."
+
+Planificador: "Definí la secuencia matemática de reducción del gap (ej. división por 2). Estructurá el código para que sea obligatorio imprimir el valor actual del salto y el estado del arreglo en cada etapa. Redactá las directivas de código."
+
+Desarrollador: "Implementá ShellSort.java. Poné el comentario inicial en la cabecera. La ejecución debe mostrar un log en consola indicando: 'Gap actual: X' seguido de la impresión del arreglo tras completar esa pasada."
+
+Tester: "Verificá en la consola que, cuando el gap alcanza el valor 1, el algoritmo aplique correctamente el recorrido final de inserción estándar. Probá con un arreglo de longitud impar y otro de longitud par."
+
+Explicador: "Justificá por qué dejar un arreglo 'casi ordenado' mediante grandes saltos reduce drásticamente el costo computacional final. Dame 2 preguntas de examen sobre el impacto de la secuencia de gaps en el rendimiento."
+
