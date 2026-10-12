@@ -1,0 +1,12 @@
+
+
+
+Analista: "Analizá el Ejercicio 7: Sumar los dígitos individuales de un entero recursivamente. Explicá cómo extraer el último dígito (n % 10) y reducir el problema (n / 10). Redactá el prompt base."
+
+Planificador: "Definí la arquitectura de la solución. Establecé el caso base (n < 10 retorna n) y la huella de memoria espacial. Redactá las directivas para la implementación."
+
+Desarrollador: "Escribí SumarDigitos.java en un solo archivo. Incluí el comentario inicial arriba. El main debe probar los casos 5, 24 y 1234."
+
+Tester: "Audita este código. Verificá que sume correctamente y probá el comportamiento límite con números de un solo dígito."
+
+Explicador: "Detallá el paso a paso de la memoria al desglosar el número 1234. Formulá una pregunta de examen sobre el uso del operador módulo en llamadas recursivas y respondela."
