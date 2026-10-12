@@ -1,0 +1,37 @@
+Analista: 
+
+Implementá en Java el algoritmo Bubble Sort para ordenar en forma ascendente
+un arreglo `int[]`. La solución debe ser clara y adecuada para una entrega de
+una materia de Estructuras de Datos y Análisis de Algoritmos.
+
+Requisitos:
+- Ordená el arreglo en el lugar, sin usar `Arrays.sort` ni delegar el
+  ordenamiento a otra biblioteca.
+- Contemplá de forma segura una referencia `null`: no debe producir una
+  excepción y debe reportar cero comparaciones y cero intercambios.
+- Para arreglos vacíos o de un solo elemento, reportá cero comparaciones y
+  cero intercambios.
+- Contabilizá por separado las comparaciones entre valores del arreglo y los
+  intercambios efectivos. No cuentes las comparaciones de índices ni
+  intercambios innecesarios.
+- Incorporá una salida temprana si una pasada completa no realiza
+  intercambios.
+- Exponé claramente el arreglo ordenado y ambos contadores; elegí una
+  estructura de resultado sencilla y explicá su uso.
+- Incluí una demostración breve y pruebas automatizadas apropiadas al proyecto.
+  Cubrí `null`, arreglo vacío, un elemento, entrada ya ordenada, entrada en
+  orden inverso y valores negativos o repetidos. Verificá tanto el resultado
+  como los contadores.
+- Explicá la idoneidad del algoritmo: Bubble Sort tiene costo promedio y de
+  peor caso O(n²), por lo que es adecuado principalmente con fines didácticos
+  o para conjuntos pequeños, no para grandes volúmenes de datos. La salida
+  temprana reduce el mejor caso a O(n) para una entrada ya ordenada, pero no
+  cambia el promedio ni el peor caso; el espacio auxiliar debe ser O(1).
+- Para `n > 1`, con la salida temprana, una entrada ya ordenada debe producir
+  `n - 1` comparaciones entre elementos y cero intercambios. Una entrada en
+  orden inverso debe producir `n(n - 1)/2` comparaciones e intercambios.
+
+Antes de modificar archivos, revisá la estructura y convenciones del proyecto.
+Implementá únicamente lo necesario para este ejercicio, mantené el código
+legible y ejecutá las pruebas pertinentes. Al finalizar, resumí los archivos
+creados o modificados, la complejidad y el resultado de las pruebas.
