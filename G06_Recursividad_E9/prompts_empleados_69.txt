@@ -1,0 +1,10 @@
+Analista: "Analizá el Ejercicio 9: Determinar si una palabra es palíndromo recursivamente. Explicá la reducción comprobando los extremos y pasando el subtexto interior. Generá el prompt base."
+
+Planificador: "Diseñá la firma del método devolviendo un boolean. Aclará los dos casos base: longitud <= 1 (retorna true) y extremos distintos (retorna false). Indicá las instrucciones de código."
+
+Desarrollador: "Implementá la lógica en Palindromo.java. Incluí el bloque de comentarios requerido. Probá con 'a', 'radar', 'reconocer' y 'java'."
+
+Tester: "Diseñá casos de prueba para validar que el algoritmo sea insensible a mayúsculas (toLowerCase()). Verificá que los cortes anticipados funcionen."
+
+Explicador: "Explicá cómo el caso base de fallo (cuando los extremos son distintos) evita que la recursividad siga procesando inútilmente. Haceme una pregunta trampa para un examen."
+
