@@ -1,0 +1,10 @@
+Analista: "Analizá el Ejercicio 7: Ejecutar Quicksort sobre un arreglo ya ordenado ({1, 2, 3, 4, 5, 6, 7}). Explicá detalladamente por qué elegir el primer elemento como pivote en este escenario particular genera un rendimiento paupérrimo y redactá el prompt."
+
+Planificador: "Diseñá la instrumentación del código para contar la cantidad exacta de llamadas recursivas realizadas durante la ejecución. Generá las directivas de implementación."
+
+Desarrollador: "Programá QuickSortPeorCaso.java. El main debe ejecutar el algoritmo sobre el arreglo ordenado de ejemplo e imprimir el contador final de llamadas recursivas."
+
+Tester: "Verificá empíricamente la degradación de rendimiento contrastando la cantidad de llamadas de este arreglo ordenado frente a un arreglo desordenado del mismo tamaño."
+
+Explicador: "Explica de manera breve el código y vuelca la explicación en pipeline/04_explicacion.md"
+
