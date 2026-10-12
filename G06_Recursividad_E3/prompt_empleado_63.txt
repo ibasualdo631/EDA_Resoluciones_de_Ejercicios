@@ -1,0 +1,5 @@
+Analista: "Analizá el Ejercicio 3: Multiplicar dos enteros a * b recursivamente sin usar el operador *. Explicá cómo se reduce el parámetro b y por qué el caso base es b=0. Generá el prompt base"   
+Planificador: "Diseñá la arquitectura para este método. Proyectá el uso de memoria O(n) por el Call Stack y definí qué pasa si ingresan factores negativos."
+Desarrollador: "Escribí el código en MultiplicacionSumas.java. Poné el comentario del prompt inicial arriba. El main debe probar (4,0), (4,1) y (4,3)."
+Tester: "Diseñá y ejecutá una tabla de pruebas para asegurar que multiplicar por cero frene la recursión correctamente."
+Explicador: "Explicá el código de manera breve, solo pone énfasis en las funcionalidades interesantes que tenga"
