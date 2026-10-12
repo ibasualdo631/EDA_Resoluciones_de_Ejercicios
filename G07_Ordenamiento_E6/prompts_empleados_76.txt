@@ -1,0 +1,10 @@
+Analista: "Analizá el Ejercicio 6: Implementar Quicksort usando siempre el primer elemento como pivote. Relacioná conceptualmente este algoritmo con la estrategia de dividir y conquistar, y redactá el prompt base."
+
+Planificador: "Diseñá la estructura técnica. El algoritmo debe mostrar obligatoriamente por consola: el pivote elegido, el subarreglo izquierdo, el subarreglo derecho y el arreglo final ordenado en cada paso."
+
+Desarrollador: "Implementá QuickSortBasico.java. Incluí la cabecera con el prompt. Asegurate de que la salida por consola imprima exactamente los 4 puntos requeridos durante las particiones."
+
+Tester: "Validá que la partición agrupe correctamente los menores a la izquierda y los mayores a la derecha del pivote, y armá una matriz de pruebas con casos normales."
+
+Explicador: "Explicá detalladamente cómo se combinan los subarreglos una vez que se alcanza el caso base."
+
