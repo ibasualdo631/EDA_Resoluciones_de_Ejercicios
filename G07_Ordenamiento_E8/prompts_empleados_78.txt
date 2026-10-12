@@ -1,0 +1,10 @@
+Analista: "Analizá el Ejercicio 8: Implementar MergeSort. Explicá de forma clara la diferencia fundamental entre la fase de división recursiva y la fase de fusión (merge). Armá el prompt inicial."
+
+Planificador: "Definí la arquitectura. El código debe estar preparado para mostrar explícitamente en consola cómo se divide el arreglo, el momento exacto en que llega a la condición de corte, y cómo se van fusionando los subarreglos."
+
+Desarrollador: "Escribí MergeSortTrazado.java. Dejá el comentario inicial arriba. Implementá los System.out.println necesarios para evidenciar la división, el corte y la fusión paso a paso."
+
+Tester: "Comprobá que el consumo de memoria auxiliar sea el esperado y validá el ordenamiento final con arreglos de longitud par e impar."
+
+Explicador: "Justificá por qué MergeSort garantiza un tiempo de ejecución $O(n \log n)$ en todos los escenarios. Formulá una pregunta trampa sobre su complejidad espacial."
+
