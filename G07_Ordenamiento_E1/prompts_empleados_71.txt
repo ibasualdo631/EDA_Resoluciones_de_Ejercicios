@@ -1,0 +1,10 @@
+Analista: "Analizá el Ejercicio 1: Implementar Bubble Sort e imprimir el arreglo tras cada pasada. Explicá conceptualmente por qué el elemento mayor 'flota' y se desplaza hacia el final en cada iteración, reduciendo el rango de comparación. Redactá el prompt inicial formal."
+
+Planificador: "Diseñá la estructura técnica para BubbleSort. Definí la complejidad temporal asintótica $O(n^2)$ y establecé cómo el algoritmo debe imprimir el estado del arreglo luego de cada ciclo externo. Generá las instrucciones para el desarrollador."
+
+Desarrollador: "Implementá el código en BubbleSort.java. Incluí el bloque de comentarios obligatorio con el prompt en la cabecera. El código debe mostrar por consola el arreglo original y su estado paso a paso en cada pasada."
+
+Tester: "Audita este código. Armá una matriz de pruebas que valide arreglos desordenados, un arreglo ya ordenado y un caso con elementos duplicados, confirmando que la salida paso a paso sea correcta."
+
+Explicador: "Explicá detalladamente por qué este algoritmo es ineficiente para grandes volúmenes de datos. Haceme 2 preguntas teóricas de examen sobre el comportamiento de Burbuja en su mejor y peor caso."
+
