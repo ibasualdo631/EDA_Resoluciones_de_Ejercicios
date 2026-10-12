@@ -1,0 +1,3 @@
+1. **Recursividad + `String` inmutable:** el código queda expresivo y sigue directamente la idea de “invertir el resto y agregar el primer carácter”. Como cada concatenación crea un nuevo `String` y cada llamada ocupa pila, puede consumir más tiempo y memoria; con entradas grandes también puede desbordar la pila.
+
+2. **Enfoque iterativo:** evita muchas llamadas y puede construir el resultado eficientemente con un `StringBuilder`, por lo que suele ser mejor para cadenas largas. A cambio, puede ser menos cercano a la definición recursiva del ejercicio y requiere manejar explícitamente el recorrido.

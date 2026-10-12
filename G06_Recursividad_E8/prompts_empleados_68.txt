@@ -1,0 +1,10 @@
+Analista: "Analizá el Ejercicio 8: Invertir un String de forma recursiva. Aclará por qué el caso base es una cadena vacía o de longitud 1, y cómo se reduce extrayendo caracteres con substring(1). Armá el prompt inicial."
+
+Planificador: "Armá el plan técnico. Definí la firma del método, el manejo preventivo de Strings nulos y evaluá el costo asintótico de concatenar Strings en cada llamada recursiva."
+
+Desarrollador: "Programá InvertirPalabra.java. Agregá la cabecera con el prompt. Validá en el main los textos '', 'a', 'hola' y 'recursivo'."
+
+Tester: "Validá que el código no lance NullPointerException al recibir un String nulo y confirmá que la inversión de caracteres coincida con lo esperado."
+
+Explicador: "Explicá el trade-off (ventajas y desventajas) de usar recursividad con Strings inmutables frente a usar un enfoque iterativo. Dame 2 conceptuales cortas."
+
