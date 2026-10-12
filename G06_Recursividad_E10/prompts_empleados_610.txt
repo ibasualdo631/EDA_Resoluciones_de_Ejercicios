@@ -1,0 +1,10 @@
+Analista: "Analizá el Ejercicio 10: Buscar un elemento en un arreglo recursivamente sin usar for o while. Explicá la necesidad de usar un parámetro de índice auxiliar y los casos base de éxito/fallo. Redactá el prompt."
+
+Planificador: "Definí la arquitectura usando un método público 'wrapper' (envoltorio) para ocultar el índice al usuario, y un método privado que maneje la recursión. Justificá la complejidad temporal O(N)"
+
+Desarrollador: "Escribí BusquedaRecursivaArreglo.java. Poné el comentario inicial en la cabecera. El main debe buscar 4, 10 y 99 en un arreglo estático [10, 25, 4, 8, 30]."
+
+Tester: "Verificá que el índice no provoque ArrayIndexOutOfBoundsException al recorrer todo el arreglo y confirmá que retorne -1 cuando el elemento no existe."
+
+Explicador: "Describí el concepto de 'método envoltorio/wrapper' y por qué es una buena práctica de encapsulamiento al diseñar funciones recursivas. Dame 2 preguntas de final."
+
