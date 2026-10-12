@@ -1,0 +1,9 @@
+Analista: "Analizá el Ejercicio 5: Imprimir un conteo regresivo de n a 0. Aclará que la función es void (produce un efecto secundario) y que el caso base es n < 0. Redactá el prompt."
+
+Planificador: "Elaborá el plan técnico. Explicá explícitamente qué sucedería en la memoria si en la llamada recursiva se usara n + 1 en lugar de n - 1 (StackOverflowError)"
+
+Desarrollador: "Implementá ConteoRegresivo.java. Dejá el comentario obligatorio al principio. Hacé que el main imprima un conteo desde 0 y otro desde 3."
+
+Tester: "Validá que la salida por consola imprima exactamente los números esperados y que cortar la recursión con valores negativos funcione."
+
+Explicador: "Explicá el error fatal de desbordamiento de pila y por qué un mal diseño del caso recursivo rompe la memoria RAM."
