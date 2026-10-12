@@ -1,0 +1,10 @@
+Analista: "Analizá el Ejercicio 3: Implementar Insertion Sort sobre un arreglo casi ordenado ({1, 2, 3, 5, 4, 6, 7}). Explicá por qué este algoritmo alcanza un rendimiento óptimo (cercano a $O(n)$) bajo esta condición inicial. Redactá el prompt."
+
+Planificador: "Definí la arquitectura de la solución, la lógica del ciclo hacia atrás y la variable para contabilizar los desplazamientos. Justificá la complejidad espacial $O(1)$. Redactá las directivas de implementación."
+
+Desarrollador: "Escribí InsertionSortCasiOrdenado.java. Insertá el prompt inicial en el bloque superior. El código debe ordenar el arreglo dado y mostrar por consola el número exacto de desplazamientos realizados."
+
+Tester: "Validá que el algoritmo solo desplace el número 4 en el arreglo de ejemplo. Armá un caso de prueba en tu matriz pasando un arreglo ordenado de forma inversa (peor caso) para contrastar el incremento masivo de desplazamientos."
+
+Explicador: "Describí paso a paso en memoria cómo opera el desplazamiento del elemento '4'. Haceme una pregunta conceptual sobre el corte anticipado del bucle interno en Insertion Sort."
+
