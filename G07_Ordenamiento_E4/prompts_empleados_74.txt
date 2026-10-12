@@ -1,0 +1,10 @@
+Analista: "Analizá el Ejercicio 4: Ordenar un arreglo de nombres (String) alfabéticamente usando Selection Sort. Razoná y explicá cómo cambia la evaluación algorítmica al comparar cadenas de texto inmutables en lugar de tipos primitivos numéricos. Armá el prompt inicial."
+
+Planificador: "Diseñá el método utilizando el método compareTo() de la clase String. Establecé el manejo de objetos nulos en el arreglo y generá las instrucciones detalladas para el desarrollador."
+
+Desarrollador: "Programá SelectionSortNombres.java. Agregá la cabecera obligatoria. El main debe probar el ordenamiento con el arreglo {\"Lucia\", \"Ana\", \"Pedro\", \"Juan\"} y mostrar el resultado por consola."
+
+Tester: "Diseñá casos de prueba considerando sensibilidad a mayúsculas y minúsculas (lexicografía) y nombres que comiencen con la misma letra inicial (ej. 'Juan' vs 'Julio'). Generá el reporte."
+
+Explicador: "Explicá cómo opera internamente compareTo() a nivel de valores Unicode"
+
