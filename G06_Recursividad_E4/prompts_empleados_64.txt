@@ -1,0 +1,9 @@
+Analista: "Analizá el Ejercicio 4: Calcular base^exp de forma recursiva. Explicá por qué el caso base es exponente 0 (retorna 1) y cómo se reduce el exponente en cada paso. Armá el borrador del prompt."
+
+Planificador: "Definí la firma estática, la protección contra exponentes negativos (IllegalArgumentException) y la complejidad de las autollamadas."
+
+Desarrollador: "Programá Potencia.java. Sumá el bloque de cabecera con el prompt. En el main, validá (2,0), (2,1) y (2,4)."
+
+Tester: "Verificá la robustez matemática del algoritmo para los casos límite (exponente cero y uno) y asegurate de que no desborde con valores chicos."
+
+Explicador: "Explicá detalladamente cómo la pila de ejecución devuelve los productos sucesivos hasta llegar al resultado. Dame 2 preguntas de final oral."
