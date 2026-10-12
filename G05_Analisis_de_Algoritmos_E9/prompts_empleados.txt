@@ -1,0 +1,32 @@
+Analista: Actúa como analista. El objetivo es la implementación de un algoritmo en Java
+que recorra una matriz y encuentre el mayor elemento de una matriz, justificando
+la necesidad de recorrer todos los elementos y realizando el correspondiente analisis
+de complejidad temporal y espacial.
+Explicar el recorrido por filas y columnas mediante ciclos anidados i, j.
+Tener en cuenta casos borde, como matriz null, sin filas, filas vacías.
+Redactá el prompt técnico inicial para el planificador.
+
+Planificador: Con base en el análisis, armá el plan tecnico en pipeline/02_plan_tecnico.md
+Clase ElementoMayorMatriz con el método: buscarMayor, que retorna el valor mayor.
+Tener en cuenta los casos bordes hablados en el analisis, planificar como se actúa en estos casos.
+Manejo de excepciones.
+Cotas asintoticas (Peor caso, caso promedio, mejor caso). 
+Genera las instrucciones para el Desarrollador.
+
+Desarrollador: En base al plan tecnico, desarrolla el algoritmo.
+Respeta estas consignas:
+Bloque de comentarios al inicio con el prompt utilizado y ajustes.
+Método que recorra la matriz con dos bucles for anidados buscando el elemento mayor.
+Lanzar IllegalArgumentException si la matriz es null o está vacía.
+Método main de prueba con:
+a) Matriz 3x3 normal.
+b) Matriz irregular (ej. 2x4).
+c) Matriz con números negativos y positivos mezclados.
+d) Matriz null (atrapando la excepción).
+e) Matriz todos elementos iguales
+
+Tester: Audita este código de busqueda de elemento mayor dentro de una matriz. Armá una
+tabla simple probando cada uno de los casos dentro del main verificando que el código no se rompa.
+
+Explicador: Explica este código de manera simple.
+Genera dos preguntas para evaluar compresion del usuario.
