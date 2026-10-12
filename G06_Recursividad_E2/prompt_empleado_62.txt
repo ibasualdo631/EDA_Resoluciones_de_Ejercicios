@@ -1,0 +1,5 @@
+Analista: "Analizá el Ejercicio 2: Sumar recursivamente los números desde n hasta 1. Explicá cuál es el caso más simple (n=0) y por qué la suma equivale a n + suma(n-1). Redactá el prompt inicial."   
+Planificador: "Armá el plan técnico. Definí la firma del método, validaciones para números menores a 0, y justificá la complejidad temporal O(n) del descenso recursivo."
+Desarrollador: "Implementá SumaNumeros.java en un solo archivo. Incluí el bloque de comentarios superior y probá en el main los valores 0, 1 y 5 (esperado: 15)."
+Tester: "Audita este código. Verificá qué ocurre si le paso un número negativo y confirmá la sumatoria con casos base."
+Explicador: "Explicá el código"
