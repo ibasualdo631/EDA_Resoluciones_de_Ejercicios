@@ -1,0 +1,9 @@
+Analista: "Analizá el Ejercicio 6: Contar la cantidad de dígitos de un entero positivo de forma recursiva. Explicá cómo se achica el número (división por 10), por qué el caso base es n < 10 (que retorna 1) y redactá el prompt inicial formal"
+
+Planificador: "Diseñá la estructura técnica en Java. Definí la validación para números negativos (usando Math.abs) y justificá la complejidad temporal O(N). Generá las instrucciones para el desarrollador."
+
+Desarrollador: "Implementá el código en ContarDigitos.java. Incluí el bloque de comentarios obligatorio con el prompt en la cabecera. Probá en el main los valores 7, 45 y 98765."
+
+Tester: "Revisá el código. Validá qué ocurre con el número 0 y con los negativos. Armá una tabla de pruebas confirmando los resultados esperados."
+
+Explicador: "Explicá cómo se acumulan los '+ 1' en el Call Stack durante la fase de ascenso. Haceme 2 preguntas teóricas de examen sobre este algoritmo."
