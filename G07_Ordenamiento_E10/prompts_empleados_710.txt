@@ -1,0 +1,10 @@
+Analista: "Analizá el Ejercicio 10: Ordenar de mayor a menor un arreglo de objetos Jugador (nombre, puntaje). Justificá conceptualmente qué algoritmo de ordenamiento es el más conveniente y estable para este problema. Redactá el prompt."
+
+Planificador: "Definí la clase Jugador y el método de ordenamiento descendente basado en la estrategia elegida. Establecé cómo gestionar empates si dos jugadores tienen el mismo puntaje. Generá el plan."
+
+Desarrollador: "Escribí el código en Java. En el main, cargá los jugadores de ejemplo (Ana 1200, Pedro 900, Lucia 1500) y mostrá el ranking impreso por consola ordenado correctamente."
+
+Tester: "Validá que el algoritmo preserve el orden de los elementos originales en caso de un empate de puntajes (estabilidad del algoritmo) y generá la matriz de pruebas."
+
+Explicador: "Detallá cómo altera la lógica de comparación el hecho de ordenar objetos en base a uno de sus atributos, frente a ordenar primitivos. Haceme la última pregunta de examen."
+
