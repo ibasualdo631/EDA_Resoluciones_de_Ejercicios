@@ -1,0 +1,10 @@
+Analista: "Comparar Bubble Sort, Selection Sort e Insertion Sort ordenando el mismo arreglo. El objetivo es contrastar las estrategias internas y no solo el resultado final. Generá el prompt base."
+
+Planificador: "Diseñá una clase integradora que reciba copias idénticas del mismo arreglo desordenado. Definí contadores independientes para registrar la cantidad de comparaciones y la cantidad de intercambios/desplazamientos de cada método."
+
+Desarrollador: "Implementá los 3 algoritmos en Java. En el main, mostrá el arreglo ordenado resultante y una tabla final comparando las comparaciones y movimientos físicos de los tres métodos."
+
+Tester: "Ejecutá el código con un arreglo invertido (peor caso general) y confirmá que las métricas de intercambios y comparaciones reflejen la teoría asintótica."
+
+Explicador: "Interpreta los resultados impresos. Explicá por qué Insertion Sort puede superar ampliamente a los otros dos en casos casi ordenados. Dame 2 conceptuales."
+
