@@ -1,0 +1,9 @@
+@analista: "Analizá el Ejercicio 1: Calcular recursivamente el factorial de un número. Definí por qué se puede hacer recursivo, cuál es el caso base (n=0 o 1) y cómo se reduce el problema. Redactá un prompt claro con esto."
+
+@planificador: "Diseñá la estructura técnica para calcular el factorial en Java. Definí el manejo de excepciones para números negativos y la complejidad asintótica esperada de la pila de llamadas. Generá las instrucciones para el desarrollador."
+
+@desarrollador:"Implementá la solución en un único archivo Java (Factorial.java). Incluí el bloque de comentarios obligatorio en la cabecera con el prompt inicial y un main que pruebe los valores 0, 1 y 5."
+
+@tester: "Revisá este código de factorial. Validá que no falle con números negativos y armá una matriz de pruebas confirmando que factorial de 5 devuelva 120."
+
+@explicador:  "Explicame el código, cómo opera el Call Stack en este código. Haceme 2 preguntas sobre este tema."
