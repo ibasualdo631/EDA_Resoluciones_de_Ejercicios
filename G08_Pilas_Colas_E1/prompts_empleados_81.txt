@@ -1,0 +1,10 @@
+Analista: "Analizá el Ejercicio 1: Pila de enteros con arreglo estático. Definí el uso del índice top (inicio en -1), los casos límite de Overflow y Underflow, y redactá el prompt inicial para el planificador."
+
+Planificador: "Diseñá la clase PilaEnteros con atributos privados, métodos en camelCase, validaciones de excepciones (IllegalStateException y NoSuchElementException) y complejidad O(1) para sus primitivas."
+
+Desarrollador: "Implementá PilaEnteros.java desde cero sin librerías nativas. Incluí el bloque de comentarios obligatorio con el prompt y ajustes en la cabecera, y un main con pruebas de inserción, extracción y desbordamiento."
+
+Tester: "Audita PilaEnteros. Verificá la protección contra Underflow al vaciar la pila y Overflow al llenarla por completo. Armá una tabla simple de casos de prueba."
+
+Explicador: "Explicá por qué top inicia en -1 y cómo opera la memoria contigua en el Heap. Hace 3 preguntas cortas acerca del código y contestalas."
+
