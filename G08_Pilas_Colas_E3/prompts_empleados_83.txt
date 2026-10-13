@@ -1,0 +1,10 @@
+Analista: "Analizá el Ejercicio 3: Cola simple de enteros basada en arreglos. Explicá el rol de los índices front y rear, cómo avanzan al encolar y desencolar, y redactá el prompt inicial."
+
+Planificador: "Diseñá la arquitectura de ColaEnteros especificando la gestión de los punteros front y rear, las condiciones de borde y la complejidad O(1)."
+
+Desarrollador: "Implementá ColaEnteros.java sin colecciones nativas. Incluí el bloque de comentarios inicial con el prompt empleado y un main de prueba con inserciones y extracciones secuenciales."
+
+Tester: "Revisá el código de la cola simple. Comprobá los estados de frontera (front y rear al vaciar o llenar la estructura)."
+
+Explicador: "Explicá por qué la cola implementa disciplina FIFO (First In, First Out) y qué limitaciones físicas presenta este diseño lineal."
+
