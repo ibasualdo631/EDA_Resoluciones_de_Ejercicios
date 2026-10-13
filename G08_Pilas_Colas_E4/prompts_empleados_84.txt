@@ -1,0 +1,10 @@
+Analista: "Analizá el Ejercicio 4: Sistema de turnos. Justificá conceptualmente por qué este problema requiere obligatoriamente una cola (FIFO) y no una pila (LIFO). Redactá el prompt inicial para el planificador."
+
+Planificador: "Diseñá el sistema técnico vinculando una clase Cliente o Turno con la estructura de cola subyacente, definiendo firmas y validaciones."
+
+Desarrollador: "Codificá el sistema de turnos en SistemaTurnos.java. Añade la cabecera obligatoria de comentarios y un método main que simule la llegada y atención ordenada de varios clientes."
+
+Tester: "Verifica que el sistema atienda estrictamente en el orden de llegada y controle de forma robusta el intento de atender cuando no hay turnos pendientes."
+
+Explicador: "Explicá la diferencia práctica y algorítmica entre modelar este problema con FIFO frente a LIFO. Hace y responde alguna pregunta interesante acerca del código."
+
