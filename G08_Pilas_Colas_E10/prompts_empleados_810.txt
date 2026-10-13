@@ -1,0 +1,10 @@
+Analista: "Analizá el Ejercicio 10: Cola circular. Explicá cómo se usa el operador módulo % para mover los punteros de forma cíclica y cómo se detecta si la cola está llena o vacía, redactando el prompt inicial para el planificador"
+
+Planificador: "Diseñá la arquitectura de ColaCircular definiendo la aritmética modular para front y rear, los contratos de inserción/extracción y la complejidad O(1) estricta."
+
+Desarrollador: "Implementá ColaCircular.java. Añade la cabecera obligatoria de comentarios incluyendo el prompt y un método main que demuestre el rebote de los punteros al principio del arreglo y la reutilización de celdas."
+
+Tester: "Comprobá mediante pruebas de estrés que la cola circular reutilice el espacio correctamente al llegar al final del arreglo sin generar falso desbordamiento."
+
+Explicador: "Explicá detalladamente la matemática detrás del operador módulo en el anillo infinito y planteá y responde preguntas sobre su implementación."
+
