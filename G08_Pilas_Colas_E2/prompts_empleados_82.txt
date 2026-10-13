@@ -1,0 +1,10 @@
+Analista: "Analizá el Ejercicio 2: Simulador de torre de platos usando la lógica LIFO. Definí por qué el último plato en colocarse es el primero en retirarse y redactá el prompt inicial para el planificador".
+
+Planificador: "Diseñá la clase TorrePlatos reutilizando la lógica de pila. Definí los métodos para apilar, desapilar y consultar el plato superior, especificando el manejo de excepciones."
+
+Desarrollador: "Implementá TorrePlatos.java en un archivo único. Incluí la cabecera de comentarios obligatoria y un main que simule apilar varios platos y retirarlos uno a uno."
+
+Tester: "Validá el comportamiento de la torre. Comprobá que al vaciar la torre salte la excepción correspondiente sin romper la ejecución."
+
+Explicador: "Explicá la relación entre esta simulación de pila y el funcionamiento de la Pila de Ejecución (Call Stack) de la JVM. Formulá y responde una pregunta conceptual."
+
