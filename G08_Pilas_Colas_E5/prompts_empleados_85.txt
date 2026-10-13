@@ -1,0 +1,10 @@
+Analista: "Analizá el Ejercicio 5: Cola de impresión. Explicá cómo la disciplina FIFO representa de manera correcta el flujo de una cola de hardware real y redactá el prompt inicial para el planificador".
+
+Planificador: "Diseñá la estructura de datos para la cola de impresión, modelando un objeto Documento y estableciendo los contratos para encolar y procesar trabajos."
+
+Desarrollador: "Implementá ColaImpresion.java en un archivo único. Incluí el bloque de comentarios inicial con el prompt empleado y un main que demuestre el envío y procesamiento secuencial de documentos."
+
+Tester: "Audita el código asegurando que no se altere el orden de los documentos y que se manejen correctamente los casos de cola vacía."
+
+Explicador: "Explicá la importancia de las colas en sistemas operativos (como el buffering de periféricos e impresión)."
+
