@@ -1,0 +1,10 @@
+Analista: "Analizá el Ejercicio 9: Problema de desperdicio de espacio en cola simple. Explicá cómo se generan los espacios libres a la izquierda de front y por qué ocurre el falso desbordamiento, redactando el prompt inicial."
+
+Planificador: "Diseñá un programa de demostración que ejecute una secuencia controlada de inserciones y extracciones para evidenciar el bloqueo de rear contra el límite físico del arreglo a pesar de haber celdas libres."
+
+Desarrollador: "Implementá DesperdicioCola.java. Incluí la cabecera obligatoria de comentarios y un main que imprima visualmente el estado del arreglo interno tras cada operación."
+
+Tester: "Verifica que la traza por consola muestre claramente el estado del arreglo y el momento exacto en que se dispara el falso Overflow."
+
+Explicador: "Explicá por qué no se desplazan los elementos hacia la izquierda para solucionar esto (costo O(n)) y por qué este problema exige una estructura circular."
+
