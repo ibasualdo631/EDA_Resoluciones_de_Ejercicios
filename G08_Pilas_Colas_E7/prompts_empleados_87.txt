@@ -1,0 +1,10 @@
+Analista: "Analizá el Ejercicio 7: Sistema de turnos. Justificá conceptualmente por qué este problema utiliza estrictamente FIFO y no LIFO, y redactá el prompt inicial."
+
+Planificador: "Diseñá el sistema técnico vinculando una clase o estructura de persona/turno con la cola subyacente, definiendo firmas, tipos de retorno y validaciones de borde."
+
+Desarrollador: "Codificá el sistema de turnos en SistemaTurnos.java. Añade la cabecera obligatoria de comentarios y un método main que simule la llegada y atención ordenada de varios clientes."
+
+Tester: "Verificá que el sistema atienda estrictamente en el orden de llegada y controle de forma robusta el intento de atender cuando no hay turnos pendientes."
+
+Explicador: "Explicá la diferencia práctica y algorítmica entre modelar este problema con FIFO frente a LIFO. Haceme una pregunta de defensa oral."
+
