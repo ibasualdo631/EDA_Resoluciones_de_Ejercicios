@@ -1,0 +1,9 @@
+Analista: "Mira el enunciado del ejercicio "Ejercicio101.png",Analiza la creación de una pila de enteros usando una lista enlazada simple. Define los casos de uso para apilar, desapilar, consultar tope, verificar vacío, buscar e imprimir, identificando casos límite y guardando el documento en ./pipeline/01_analisis.md."
+
+Planificador: "Diseña la arquitectura. Define cómo el head actuará como tope y justifica algorítmicamente cómo lograr que push y pop sean O(1)."
+
+Desarrollador: "implementa la pila en Java. Requisito obligatorio: Agrega un comentario en la cabecera explicando por qué head representa el tope, por qué las operaciones son $O(1)$, y anota si hiciste ajustes."
+
+Tester: "Valida la pila frente a casos límite (como intentar desapilar una pila vacía) basándote en el análisis. Diseña las pruebas y documenta los resultados en ./pipeline/03_pruebas.md."
+
+Explicador: "Analiza el código Java resultante y redacta en ./pipeline/04_explicacion.md una guía didáctica que explique paso a paso cómo funciona el enlace del head y el concepto LIFO."
