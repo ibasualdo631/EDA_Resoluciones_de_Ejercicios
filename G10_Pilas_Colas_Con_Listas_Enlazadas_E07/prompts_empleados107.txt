@@ -1,0 +1,9 @@
+Analista: ""Mira el enunciado del ejercicio "Ejercicio107.png", Extrae las reglas para validar expresiones matemáticas como y define los casos de error en ./pipeline/01_analisis.md. "
+
+Planificador: "Diseña el algoritmo en ./pipeline/02_plan_tecnico.md. Define cómo una pila almacenará las aperturas para cruzarlas con los cierres, logrando una validación en tiempo lineal."
+
+Desarrollador: "Codifica el validador en Java. Requisito obligatorio: Comenta detalladamente cómo se usa la pila para emparejar aperturas y cierres."
+
+Tester: "Elabora baterías de prueba con expresiones válidas, expresiones que empiezan con cierre, y asimetrías de cantidad. Guarda en ./pipeline/03_pruebas.md."
+
+Explicador: "Traza la ejecución de una cadena válida y una inválida en ./pipeline/04_explicacion.md para facilitar la comprensión algorítmica."
