@@ -1,0 +1,9 @@
+Analista: "Analizá el Ejercicio 1: Creación de lista enlazada simple desde cero. Definí la representación física del nodo, el rol vital del puntero head y cómo se gestiona el atributo size. Redactá el prompt inicial formal."
+
+Planificador: "Diseñá la arquitectura orientada a objetos separando la clase contenedora ListaEnlazada y la clase interna estática Nodo. Definí firmas, precondiciones y el plan de complejidad asintótica O(1) para inserción al inicio, O(n) para inserción al final con puntero head)." 
+
+Desarrollador: "Implementá ListaEnlazadaSimple.java desde cero sin librerías nativas. Incluí obligatoriamente el bloque de comentarios en la cabecera con el prompt inicial y ajustes, y un método main que pruebe inserciones al inicio y final, impresión y tamaño."
+
+Tester: "Audita ListaEnlazadaSimple. Verificá el comportamiento con lista vacía, inserción de un único nodo y control de punteros head."   
+
+Explicador:  "Explicá la coreografía de referencias en el Heap y por qué perder head provoca que el Garbage Collector destruya la estructura."   
