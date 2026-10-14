@@ -1,0 +1,9 @@
+Analista: ""Mira el enunciado del ejercicio "Ejercicio110.png", Extrae los requerimientos de una lista doble genérica: inserción en extremos, eliminación específica e impresión bidireccional. Guarda en ./pipeline/01_analisis.md."
+
+Planificador: "Define la estructura en ./pipeline/02_plan_tecnico.md. Especifica por qué se requieren referencias anterior y siguiente y enumera los casos críticos al eliminar un nodo (actualización de 4 punteros adyacentes)."
+
+Desarrollador: "Implementa la lista doble en Java. Requisito obligatorio: El comentario principal debe explicar los dos punteros de cada nodo y detallar explícitamente los casos especiales de eliminación."
+
+Tester: "Prueba a fondo iterar hacia atrás y hacia adelante, y elimina nodos en los extremos y en el medio. Documenta todos los escenarios en ./pileline/03_pruebas.md"
+
+Explicador: "Redacta en ./pipeline/04_explicacion.md un diagrama lógico o guía detallada sobre cómo se desconectan y reconectan los enlaces al eliminar un nodo central."
