@@ -1,0 +1,9 @@
+Analista: "Analizá el Ejercicio 10: Convertir la lista enlazada simple de enteros en una versión genérica (ListaEnlazada<T> y Nodo<T>). Explicá qué partes del código cambian, cuáles se mantienen y por qué el algoritmo de recorrido e inserción no depende del tipo de dato. Redactá el prompt inicial."
+
+Planificador: "Diseñá la arquitectura genérica de las clases ListaEnlazada<T> y Nodo<T>, definiendo los contratos para operar de forma agnóstica al tipo de dato. Genera el plan para el desarrollador."
+
+Desarrollador: "Implementá ListaEnlazada<T> y Nodo<T> genéricos. Incluye el bloque de comentarios obligatorio en la cabecera y un main que pruebe la lista con Integer, String y un objeto personalizado (ej. Alumno).”
+
+Tester: "Verifica que el tipado estricto funcione sin errores de compilación y que las operaciones de inserción y recorrido operen correctamente con tipos de datos complejos."
+
+Explicador: "Explica qué problema resuelve la parametrización de tipos en Java y por qué la lógica de referencias y punteros es idéntica sin importar si almacena números o objetos."
