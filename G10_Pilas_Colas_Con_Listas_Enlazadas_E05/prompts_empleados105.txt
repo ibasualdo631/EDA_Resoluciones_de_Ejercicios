@@ -1,0 +1,9 @@
+Analista: "Mira el enunciado del ejercicio "Ejercicio105.png", Analiza el flujo de un historial web (visitar, volver atrás, ver actual, imprimir). Registra las reglas de negocio en ./pipeline/01_analisis.md"
+
+Planificador: "Diseña la arquitectura en ./pipeline/02_plan_tecnico.md justificando lógicamente por qué la estructura de pila representa de forma perfecta la acción de "volver atrás".
+
+Desarrollador: "Implementa EN UNA UNICA CLASE el gestor de historial en Java. Requisito obligatorio: El comentario de cabecera debe justificar por qué la política LIFO es ideal para historiales de navegación."
+
+Tester: "Valida escenarios límite, como intentar retroceder sin páginas previas en el historial. Documenta en ./pipeline/03_pruebas.md."
+
+Explicador: "Detalla paso a paso en ./pipeline/04_explicacion.md la analogía entre los métodos push/pop y la interfaz de un navegador."
