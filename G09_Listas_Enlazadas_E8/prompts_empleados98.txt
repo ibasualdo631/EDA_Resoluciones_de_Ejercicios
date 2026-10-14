@@ -1,0 +1,9 @@
+Analista: "Analizá el Ejercicio 8: Contar ocurrencias de un valor. Explicá por qué es obligatorio recorrer toda la lista de principio a fin y por qué no se debe cortar el recorrido al encontrar la primera coincidencia. Redactá el prompt inicial."
+
+Planificador: "Diseñá la firma del método contarOcurrencias(int dato) especificando la complejidad lineal O(n) y los pasos lógicos para el desarrollador."
+
+Desarrollador: “Implementá contarOcurrencias asegurando el recorrido completo mediante un acumulador. Incluye la cabecera de comentarios y un main con pruebas de valores existentes, repetidos y ausentes.”
+
+Tester: "Valida el conteo en listas vacías, listas con un único elemento y valores que aparecen múltiples veces o no figuran en la lista."
+
+Explicador: "Explica por qué la complejidad temporal es siempre O(n) y por qué las operaciones de conteo global exigen inspeccionar cada uno de los nodos."
