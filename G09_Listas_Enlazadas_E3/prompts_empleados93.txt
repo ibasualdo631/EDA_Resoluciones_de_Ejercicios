@@ -1,0 +1,9 @@
+Analista: "Analizá el Ejercicio 3: Obtener elemento por posición en lista enlazada. Justifica la necesidad de recorrer nodo por nodo a pesar de recibir un índice numérico, y redacta el prompt inicial."
+
+Planificador: "Diseña el contrato del método obtener(int posicion) especificando el manejo estricto de excepciones ante índices inválidos (IndexOutOfBoundsException o similar)."
+
+Desarrollador: "Codifica el método obtener integrándolo a la lista. Incluye la cabecera obligatoria de comentarios y un main con pruebas para posiciones válidas y de frontera."
+
+Tester: "Audita el método comprobando que se disparen las excepciones correctas al intentar consultar posiciones negativas o iguales/superiores al tamaño de la lista."
+
+Explicador:  "Explica el costo algorítmico de acceder por posición en listas enlazadas O(n) frente al acceso directo O(1) en vectores estáticos."   
