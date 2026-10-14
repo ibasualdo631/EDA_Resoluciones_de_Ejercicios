@@ -1,0 +1,9 @@
+Analista: "Analizá el Ejercicio 2: Búsqueda secuencial en lista enlazada. Explicá conceptualmente por qué la ausencia de memoria contigua imposibilita el acceso directo por índice y exige un recorrido nodo por nodo. Redactá el prompt inicial."
+
+Planificador: "Diseñá la firma del método buscar(int dato) contemplando la complejidad temporal lineal $O(n)$ y espacial $O(1)$. Definí los pasos lógicos para el desarrollador."   
+
+Desarrollador: "Implementá el método buscar en la lista enlazada. Añade el bloque de comentarios requerido en la cabecera y un método main que pruebe búsquedas exitosas (al inicio, medio, fin) y fallidas (elemento inexistente)."
+
+Tester: "Verifica la robustez de la búsqueda ante una lista vacía (head == null), lista con un solo elemento y valores repetidos."
+
+Explicador: "Explica por qué no se puede aplicar búsqueda binaria sobre una lista enlazada simple a pesar de que los datos estuvieran ordenados."
