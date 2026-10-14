@@ -1,0 +1,9 @@
+Analista: "Analizá el Ejercicio 4: Inserción en posición específica. Detalla los casos de inserción (inicio, medio, fin) y el orden crítico de reconexión de punteros para no romper la cadena. Redacta el prompt inicial."
+
+Planificador: "Diseña la lógica de punteros especificando la coreografía exacta: nuevo.setSiguiente(actual.getSiguiente()); actual.setSiguiente(nuevo);, y el manejo de validaciones de límites."
+
+Desarrollador: "Implementa insertarEnPosicion asegurando el orden correcto de asignación de referencias. Incluye el bloque de comentarios superior y un main que pruebe inserciones en distintas ubicaciones."
+
+Tester: "Verifica que el método actualice correctamente el atributo size y maneje de forma segura posiciones inválidas o fuera de rango."
+
+Explicador: "Explica qué catástrofe de memoria ocurriría si se invierten las líneas de asignación de punteros al insertar un nodo intermedio."
