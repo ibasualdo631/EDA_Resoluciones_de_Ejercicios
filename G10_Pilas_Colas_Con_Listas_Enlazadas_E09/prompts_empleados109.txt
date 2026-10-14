@@ -1,0 +1,9 @@
+Analista: ""Mira el enunciado del ejercicio "Ejercicio109.png", Define los atributos de un trabajo de impresión (archivo, páginas, usuario) y las operaciones del spooler (agregar, imprimir, listar). Guarda en ./pipeline/01_analisis.md."
+
+Planificador: "Diseña el sistema en ./pipeline/02_plan_tecnico.md argumentando por qué una impresora debe obligatoriamente regirse por FIFO."
+
+Desarrollador: "Codifica la cola de impresión en Java. Requisito obligatorio: Incluye un comentario explicando por qué el procesamiento debe ser FIFO."
+
+Tester: "Ejecuta simulaciones de envíos e impresiones consecutivas y prueba el límite de imprimir sin trabajos pendientes. Guarda en ./pipeline/03_pruebas.md."
+
+Explicador: "Genera un análisis didáctico en ./pipeline/04_explicacion.md sobre la composición de clases anidadas y manipulación de colas reales."
