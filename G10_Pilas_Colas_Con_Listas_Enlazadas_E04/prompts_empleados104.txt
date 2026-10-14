@@ -1,0 +1,9 @@
+Analista: "Desglosa los requerimientos para adaptar la cola a tipos genéricos y define cómo se probará con Strings y objetos Cliente en ./pipeline/01_analisis.md."
+
+Planificador: "Diseña la cola genérica en ./pipeline/02_plan_tecnico.md. Explica la abstracción necesaria para mantener intacto el comportamiento FIFO sin importar el dato."   
+
+Desarrollador: "Codifica la solución en Java. Requisito obligatorio: Comenta al inicio cómo se logra mantener el comportamiento FIFO de forma abstracta para cualquier objeto.
+
+Tester: "Prueba la estructura creando específicamente una cola de nombres y otra de objetos Cliente. Guarda las pruebas en ./pipeline/03_pruebas.md."
+
+Explicador: "Genera en ./pipeline/04_explicacion.md una lectura comprensiva sobre cómo interactúan los genéricos con los punteros de la cola."
