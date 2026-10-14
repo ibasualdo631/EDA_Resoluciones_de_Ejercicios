@@ -1,0 +1,9 @@
+Analista: "Analizá el Ejercicio 5: Eliminación de nodo por valor. Identifica todos los escenarios límite (lista vacía, eliminar cabeza, nodo interno, último nodo, dato ausente) y redacta el prompt inicial."
+
+Planificador: "Diseña la estrategia técnica de búsqueda y desacople de referencias, especificando el rol del Garbage Collector al dejar un nodo inaccesible."
+
+Desarrollador: "Codifica el método eliminar(int dato) en la lista enlazada. Añade el bloque de comentarios obligatorio en la cabecera y un método main con pruebas exhaustivas para cada escenario límite."
+
+Tester: "Audita la eliminación comprobando la actualización correcta de head, tail (si aplica) y size, evitando fugas de memoria o excepciones imprevistas."
+
+Explicador: "Explica cómo actúa el Garbage Collector de Java al romper la referencia hacia un nodo y formulá una pregunta conceptual de defensa oral."
