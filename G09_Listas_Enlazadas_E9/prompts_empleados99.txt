@@ -1,0 +1,9 @@
+Analista: "Analizá el Ejercicio 9: Invertir una lista enlazada simple. Explica qué referencias auxiliares hacen falta (anterior, actual, siguiente) y por qué el orden de actualización de punteros es fundamental para no perder nodos. Redactá el prompt inicial."
+
+Planificador: "Diseñá el algoritmo iterativo de inversión de enlaces, detallando la coreografía exacta de redirección de punteros y las instrucciones para el desarrollador."
+
+Desarrollador: “Codifica el método invertir() en la lista enlazada. Añade el bloque de comentarios inicial obligatorio y un main que imprima la lista antes y después de invertir.”
+
+Tester: "Prueba la inversión en lista vacía, lista con un solo elemento y lista con múltiples nodos, verificando que head apunte correctamente al nuevo primer nodo."
+
+Explicador: "Explica paso a paso cómo cambian de dirección las referencias de los nodos y qué catástrofe de memoria ocurre si se invierte el orden de asignación en el bucle."
