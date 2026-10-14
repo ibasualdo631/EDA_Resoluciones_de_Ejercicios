@@ -1,0 +1,9 @@
+Analista: ""Mira el enunciado del ejercicio "Ejercicio106.png", Analiza un sistema bancario donde los clientes poseen nombre, turno y motivo de consulta. Guarda los casos de uso en ./pipeline/01_analisis.md."
+
+Planificador: "Estructura en ./pipeline/02_plan_tecnico.md la clase Cliente y la cola. Explica cómo esta estructura garantiza el respeto del orden cronológico de llegada."
+
+Desarrollador: "Escribe el sistema EN UNA UNICA CLASE en Java. Requisito obligatorio: Agrega un comentario inicial explicando por qué la cola es la única estructura adecuada y cómo representa el orden de llegada."
+
+Tester: "Simula flujos de atención bancaria y comprueba el manejo de colas vacías, reportando en ./pipeline/03_pruebas.md."
+
+Explicador: "Escribe en ./pipeline/04_explicacion.md cómo las reglas del negocio (FIFO) dictaminaron la elección de la estructura de datos."
