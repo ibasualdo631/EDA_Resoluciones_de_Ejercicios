@@ -1,0 +1,9 @@
+Analista: "Mira el enunciado del ejercicio "Ejercicio102.png",Desglosa los requerimientos funcionales para una cola de enteros con operaciones clásicas (encolar, desencolar, etc.) y guardalo en ./pipeline/01_analisis.md."
+
+Planificador: "Explica explícitamente por qué es obligatorio usar head y tail, y detalla el problema de complejidad temporal si solo se usara head."
+
+Desarrollador: "Escribe la cola en Java siguiendo el plan técnico. Requisito obligatorio: En el comentario inicial, explica el uso de head y tail y la advertencia sobre el problema de usar solo head."
+
+Tester: "Diseña casos de prueba asegurando que tail quede correctamente en nulo al vaciar la cola. Guarda el reporte en ./pipeline/03_pruebas.md."
+
+Explicador: "Crea en ./pipeline/04_explicacion.md una explicación pedagógica sobre cómo el puntero tail optimiza la inserción en el comportamiento FIFO."
