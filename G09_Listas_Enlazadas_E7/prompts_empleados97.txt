@@ -1,0 +1,9 @@
+Analista: "Analizá el Ejercicio 7: Modificar un elemento por posición. Explicá la diferencia conceptual clave entre modificar el dato (dato) de un nodo existente y modificar la referencia al siguiente nodo (siguiente). Redactá el prompt inicial."
+
+Planificador: "Diseñá el método modificar(int posicion, int nuevoDato) con validación previa de límites antes de iniciar el recorrido. Genera las directivas para el desarrollador."
+
+Desarrollador: “Codifica el método modificar integrándolo a la lista. Añade el bloque de comentarios obligatorio y un main con pruebas de modificación en distintas posiciones.”
+
+Tester: "Verifica el manejo de excepciones ante posiciones fuera de rango y comprueba que solo se altere el campo de datos del nodo seleccionado sin romper los enlaces."
+
+Explicador: "Explica por qué mutar el dato de un nodo respeta la topología de la lista enlazada y no afecta a las referencias de los nodos adyacentes."
