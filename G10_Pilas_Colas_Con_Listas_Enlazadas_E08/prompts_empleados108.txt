@@ -1,0 +1,9 @@
+Analista: ""Mira el enunciado del ejercicio "Ejercicio108.png", Analiza la inversión de cadenas, como transformar "algoritmo" en "omtirogla", y guarda el desglose en ./pipeline/01_analisis.md."
+
+Planificador: "Establece el plan algorítmico en ./pipeline/02_plan_tecnico.md, justificando por qué apilar y desapilar consecutivamente resulta en la inversión de los caracteres."
+
+Desarrollador: "Escribe el método en Java. Requisito obligatorio: El bloque de comentarios inicial debe explicar por qué la naturaleza LIFO logra la inversión."
+
+Tester: "Valida la inversión de palabras, cadenas de una sola letra y strings vacíos, documentando en ./pipeline/03_pruebas.md."
+
+Explicador: "Explica en ./pipeline/04_explicacion.md el comportamiento de los caracteres dentro de los nodos y cómo se reconstruye el String."
