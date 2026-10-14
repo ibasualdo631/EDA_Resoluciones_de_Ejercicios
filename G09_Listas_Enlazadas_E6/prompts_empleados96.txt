@@ -1,0 +1,9 @@
+Analista: "Analizá el Ejercicio 6: Eliminar un nodo por posición en lista enlazada simple. Explicá cómo encontrar el nodo anterior al que se quiere eliminar, cómo hacer que apunte al nodo siguiente del eliminado, cómo validar límites y actualizar el tamaño. Redactá el prompt inicial formal."
+
+Planificador: "Diseñá el método eliminarEnPosicion(int posicion) especificando el manejo de excepciones por índices inválidos y la manipulación segura de punteros. Genera las instrucciones para el desarrollador."
+
+Desarrollador: “Implementá eliminarEnPosicion en la lista enlazada. Incluí obligatoriamente el bloque de comentarios en la cabecera con el prompt inicial y ajustes, y un método main que pruebe eliminar al inicio, medio y final.”
+
+Tester: "Audita el código. Verifica la protección ante posiciones inválidas y comprueba que el atributo size se actualice correctamente tras cada eliminación."
+
+Explicador: "Explica cómo se reasigna el puntero del nodo anterior para saltar el elemento borrado y qué ocurre con el nodo aislado en la memoria RAM."
